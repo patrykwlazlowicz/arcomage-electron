@@ -24,7 +24,7 @@ app.on('ready', function () {
     }));
   } else {
     win.loadURL(process.env.HOST);
-    //win.webContents.openDevTools();
+    win.webContents.openDevTools();
   }
 
   // Remove window once app is closed

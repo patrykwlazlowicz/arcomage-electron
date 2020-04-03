@@ -1,0 +1,4035 @@
+[
+    {
+        "name": "r1",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "r2",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 1
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -2
+                }
+            }
+        ]
+    },
+    {
+        "name": "r3",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 1
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": -3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -4
+                }
+            }
+        ]
+    },
+    {
+        "name": "r4",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 3
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "r5",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 2
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DISCARD_CARD",
+                "effectForOpponent": false,
+                "effectProperty": null
+            }
+        ]
+    },
+    {
+        "name": "r6",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 3
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "r7",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 4
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -3
+                }
+            }
+        ]
+    },
+    {
+        "name": "r8",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 6
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -2
+                }
+            }
+        ]
+    },
+    {
+        "name": "r9",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 3
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -5
+                }
+            }
+        ]
+    },
+    {
+        "name": "r10",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 5
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -4
+                }
+            }
+        ]
+    },
+    {
+        "name": "r11",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 6
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -4
+                }
+            }
+        ]
+    },
+    {
+        "name": "r12",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 7
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 2
+                }
+            }
+        ]
+    },
+    {
+        "name": "r13",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 8
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 2
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 4
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -2
+                }
+            }
+        ]
+    },
+    {
+        "name": "r14",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "r15",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 5
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "r16",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 6
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -7
+                }
+            }
+        ]
+    },
+    {
+        "name": "r17",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 6
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -3
+                }
+            }
+        ]
+    },
+    {
+        "name": "r18",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 5
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -5
+                }
+            }
+        ]
+    },
+    {
+        "name": "r19",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 8
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_VALUE",
+                    "conditionProperty": {
+                        "conditionForOpponent": true,
+                        "what": "castle",
+                        "property": "wall",
+                        "operation": "EQUAL",
+                        "value": 0
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -10
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_VALUE",
+                    "conditionProperty": {
+                        "conditionForOpponent": true,
+                        "what": "castle",
+                        "property": "wall",
+                        "operation": "NOT_EQUAL",
+                        "value": 0
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "r20",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 9
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -9
+                }
+            }
+        ]
+    },
+    {
+        "name": "r21",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 11
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_VALUE",
+                    "conditionProperty": {
+                        "conditionForOpponent": true,
+                        "what": "castle",
+                        "property": "wall",
+                        "operation": "GREATER_THAN",
+                        "value": 0
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -10
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_VALUE",
+                    "conditionProperty": {
+                        "conditionForOpponent": true,
+                        "what": "castle",
+                        "property": "wall",
+                        "operation": "EQUAL",
+                        "value": 0
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -7
+                }
+            }
+        ]
+    },
+    {
+        "name": "r22",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 9
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "gems",
+                        "property": "growth",
+                        "opponentWhat": "gems",
+                        "opponentProperty": "growth",
+                        "operation": "GREATER_THAN"
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -12
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "gems",
+                        "property": "growth",
+                        "opponentWhat": "gems",
+                        "opponentProperty": "growth",
+                        "operation": "LESS_OR_EQUAL"
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -8
+                }
+            }
+        ]
+    },
+    {
+        "name": "r23",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 10
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "GREATER_THAN"
+                    }
+                },
+                "effectForOpponent": true,
+                "what": "castle",
+                "property": "tower",
+                "value": -6,
+                "specialEffect": null,
+                "specialEffectProperty": null
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "LESS_OR_EQUAL"
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "r24",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 14
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -8
+                }
+            }
+        ]
+    },
+    {
+        "name": "r25",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 11
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -8
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "r26",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 12
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": 5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -10
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -5
+                }
+            }
+        ]
+    },
+    {
+        "name": "r27",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 15
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 4
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -10
+                }
+            }
+        ]
+    },
+    {
+        "name": "r28",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 17
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -10
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "r29",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 2
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "GREATER_THAN"
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -3
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "LESS_OR_EQUAL"
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -2
+                }
+            }
+        ]
+    },
+    {
+        "name": "r30",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 2
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": 1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -3
+                }
+            }
+        ]
+    },
+    {
+        "name": "r31",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 4
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -8
+                }
+            }
+        ]
+    },
+    {
+        "name": "r32",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 13
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": -3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -13
+                }
+            }
+        ]
+    },
+    {
+        "name": "r33",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 18
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -12
+                }
+            }
+        ]
+    },
+    {
+        "name": "rd",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 25
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -13
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": -10
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s1",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -8
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -8
+                }
+            }
+        ]
+    },
+    {
+        "name": "s2",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": 2
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": 2
+                }
+            }
+        ]
+    },
+    {
+        "name": "s3",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 1,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s4",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 3,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s5",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 4,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "bricks",
+                        "property": "growth",
+                        "opponentWhat": "bricks",
+                        "opponentProperty": "growth",
+                        "operation": "LESS_THAN"
+                    }
+                },
+                "effectForOpponent": false,
+                "what": "bricks",
+                "property": "growth",
+                "value": 2,
+                "specialEffect": null,
+                "specialEffectProperty": null
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "bricks",
+                        "property": "growth",
+                        "opponentWhat": "bricks",
+                        "opponentProperty": "growth",
+                        "operation": "GREATER_OR_EQUAL"
+                    }
+                },
+                "effectForOpponent": false,
+                "what": "bricks",
+                "property": "growth",
+                "value": 1,
+                "specialEffect": null,
+                "specialEffectProperty": null
+            }
+        ]
+    },
+    {
+        "name": "s6",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 7,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 4
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": 2
+                }
+            }
+        ]
+    },
+    {
+        "name": "s7",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 2,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "s8",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 5,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "bricks",
+                        "property": "growth",
+                        "opponentWhat": "bricks",
+                        "opponentProperty": "growth",
+                        "operation": "LESS_THAN"
+                    }
+                },
+                "type": "ALIGN_RESOURCES",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth"
+                }
+            }
+        ]
+    },
+    {
+        "name": "s9",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 2,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 3
+                }
+            }
+        ]
+    },
+    {
+        "name": "s10",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 3,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 4
+                }
+            }
+        ]
+    },
+    {
+        "name": "s11",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 8,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 8
+                }
+            }
+        ]
+    },
+    {
+        "name": "s12",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 10
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": -1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": 5
+                }
+            }
+        ]
+    },
+    {
+        "name": "s13",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 6,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": 2
+                }
+            }
+        ]
+    },
+    {
+        "name": "s14",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 4,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s15",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 5,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 6
+                }
+            }
+        ]
+    },
+    {
+        "name": "s16",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": -1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s17",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 8,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s18",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 7,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": -5
+                }
+            }
+        ]
+    },
+    {
+        "name": "s19",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 3,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_VALUE",
+                    "conditionProperty": {
+                        "conditionForOpponent": false,
+                        "what": "castle",
+                        "property": "wall",
+                        "operation": "EQUAL",
+                        "value": 0
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 6
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_VALUE",
+                    "conditionProperty": {
+                        "conditionForOpponent": false,
+                        "what": "castle",
+                        "property": "wall",
+                        "operation": "EQUAL",
+                        "value": 0
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 3
+                }
+            }
+        ]
+    },
+    {
+        "name": "s20",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 2,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": 1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": 4
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s21",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 9,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s22",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 9,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 7
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": 7
+                }
+            }
+        ]
+    },
+    {
+        "name": "s23",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 11,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 3
+                }
+            }
+        ]
+    },
+    {
+        "name": "s24",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 13,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 12
+                }
+            }
+        ]
+    },
+    {
+        "name": "s25",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 15,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 8
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 5
+                }
+            }
+        ]
+    },
+    {
+        "name": "s26",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 16,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 15
+                }
+            }
+        ]
+    },
+    {
+        "name": "s27",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 18,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -10
+                }
+            }
+        ]
+    },
+    {
+        "name": "s28",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 7,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 9
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": -5
+                }
+            }
+        ]
+    },
+    {
+        "name": "s29",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 1,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 91
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": 2
+                }
+            }
+        ]
+    },
+    {
+        "name": "s30",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 6,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "LESS_THAN"
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -2
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "LESS_THAN"
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": -1
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "GREATER_THAN"
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -2
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "wall",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "GREATER_THAN"
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s31",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 10,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "recruits",
+                        "property": "growth",
+                        "opponentWhat": "recruits",
+                        "opponentProperty": "growth",
+                        "operation": "LESS_THAN"
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": 6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "s32",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 14,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 7
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "s33",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 17,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "SWAP_RESOURCES",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall"
+                }
+            }
+        ]
+    },
+    {
+        "name": "sd",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 24,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 20
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 8
+                }
+            }
+        ]
+    },
+    {
+        "name": "w1",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 1,
+            "recruits": 0
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w2",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 1,
+            "recruits": 0
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w3",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 2,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 3
+                }
+            }
+        ]
+    },
+    {
+        "name": "w4",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 3,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w5",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 0,
+            "gems": 2,
+            "recruits": 0
+        },
+        "turnAgain": true,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DISCARD_CARD",
+                "effectForOpponent": false,
+                "effectProperty": null
+            }
+        ]
+    },
+    {
+        "name": "w6",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 5,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": false,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 3
+                }
+            }
+        ]
+    },
+    {
+        "name": "w7",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 4,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 2
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -2
+                }
+            }
+        ]
+    },
+    {
+        "name": "w8",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 6,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": 1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w9",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 2,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -3
+                }
+            }
+        ]
+    },
+    {
+        "name": "w10",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 3,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 5
+                }
+            }
+        ]
+    },
+    {
+        "name": "w11",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 4,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -5
+                }
+            }
+        ]
+    },
+    {
+        "name": "w12",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 3,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": 2
+                }
+            }
+        ]
+    },
+    {
+        "name": "w13",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 7,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w14",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 0,
+            "gems": 7,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "gems",
+                        "property": "growth",
+                        "opponentWhat": "gems",
+                        "opponentProperty": "growth",
+                        "operation": "LESS_THAN"
+                    }
+                },
+                "type": "ALIGN_RESOURCES",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth"
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "gems",
+                        "property": "growth",
+                        "opponentWhat": "gems",
+                        "opponentProperty": "growth",
+                        "operation": "GREATER_THAN"
+                    }
+                },
+                "type": "ALIGN_RESOURCES",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth"
+                }
+            }
+        ]
+    },
+    {
+        "name": "w15",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 6,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 8
+                }
+            }
+        ]
+    },
+    {
+        "name": "w16",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 9,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w17",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 0,
+            "gems": 8,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": -1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -9
+                }
+            }
+        ]
+    },
+    {
+        "name": "w18",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 7,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "w19",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 10,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 11
+                }
+            }
+        ]
+    },
+    {
+        "name": "w20",
+        "priorityForAI": 5,
+        "price": {
+            "bricks": 0,
+            "gems": 5,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -7
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": -1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -7
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "growth",
+                    "value": -1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w21",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 13,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -4
+                }
+            }
+        ]
+    },
+    {
+        "name": "w22",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 4,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 7
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": -10
+                }
+            }
+        ]
+    },
+    {
+        "name": "w23",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 12,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 8
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 3
+                }
+            }
+        ]
+    },
+    {
+        "name": "w24",
+        "priorityForAI": 1,
+        "price": {
+            "bricks": 0,
+            "gems": 14,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 8
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w25",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 16,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 15
+                }
+            }
+        ]
+    },
+    {
+        "name": "w26",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 15,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 10
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 5
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": 5
+                }
+            }
+        ]
+    },
+    {
+        "name": "w27",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 17,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 12
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "w28",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 8,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 11
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "value": -6
+                }
+            }
+        ]
+    },
+    {
+        "name": "w29",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "tower",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "tower",
+                        "operation": "LESS_THAN"
+                    }
+                },
+                "type": "CHANGE_VALUES",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 2
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "tower",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "tower",
+                        "operation": "GREATER_OR_EQUAL"
+                    }
+                },
+                "type": "CHANGE_VALUES",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w30",
+        "priorityForAI": 4,
+        "price": {
+            "bricks": 0,
+            "gems": 0,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 1
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "gems",
+                    "property": "state",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "name": "w31",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 5,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 4
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": 3
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -2
+                }
+            }
+        ]
+    },
+    {
+        "name": "w32",
+        "priorityForAI": 3,
+        "price": {
+            "bricks": 0,
+            "gems": 11,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "tower",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "GREATER_THAN"
+                    }
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -8
+                }
+            },
+            {
+                "condition": {
+                    "type": "COMPARE_WITH_OPPONENT",
+                    "conditionProperty": {
+                        "what": "castle",
+                        "property": "tower",
+                        "opponentWhat": "castle",
+                        "opponentProperty": "wall",
+                        "operation": "LESS_OR_EQUAL"
+                    }
+                },
+                "type": "DAMAGE",
+                "effectForOpponent": true,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "wall",
+                    "secondWaveDamageWhat": "castle",
+                    "secondWaveDamageProperty": "tower",
+                    "value": -8
+                }
+            }
+        ]
+    },
+    {
+        "name": "w33",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 15,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 13
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "state",
+                    "value": 6
+                }
+            },
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "recruits",
+                    "property": "state",
+                    "value": 6
+                }
+            }
+        ]
+    },
+    {
+        "name": "wd",
+        "priorityForAI": 2,
+        "price": {
+            "bricks": 0,
+            "gems": 21,
+            "recruits": 0
+        },
+        "turnAgain": false,
+        "canDiscard": true,
+        "sideEffects": [
+            {
+                "condition": {
+                    "type": "NO_CONDITION",
+                    "conditionProperty": null
+                },
+                "type": "CHANGE_VALUE",
+                "effectForOpponent": false,
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": 20
+                }
+            }
+        ]
+    }
+]
