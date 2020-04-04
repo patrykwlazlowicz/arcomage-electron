@@ -1,10 +1,16 @@
-import { Resources } from './resources';
+import { SideEffect } from './side-effect';
 
-export class Card {
+interface Price {
+    bricks: number;
+    gems: number;
+    recruits: number;
+}
+
+export interface Card {
     name: string;
     priorityForAI: number;
-    price: Resources;
+    price: Price;
     turnAgain: boolean;
     canDiscard: boolean;
-    ssideEffects: any[];
+    sideEffects: SideEffect[];
 }
