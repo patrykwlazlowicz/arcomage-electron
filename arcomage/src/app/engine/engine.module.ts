@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableService } from './service/table.service';
+import { AIService } from './service/ai.service';
 
 @NgModule({
   declarations: [],
@@ -8,7 +9,8 @@ import { TableService } from './service/table.service';
     CommonModule
   ],
   providers: [
-    TableService
+    TableService,
+    AIService
   ]
 })
 export class EngineModule { }

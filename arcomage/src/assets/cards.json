@@ -7,7 +7,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -46,7 +46,7 @@
             "gems": 0,
             "recruits": 1
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -74,7 +74,7 @@
             "gems": 0,
             "recruits": 1
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -115,7 +115,7 @@
             "gems": 0,
             "recruits": 3
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -141,7 +141,7 @@
             "gems": 0,
             "recruits": 2
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -163,7 +163,7 @@
             "gems": 0,
             "recruits": 3
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -206,7 +206,7 @@
             "gems": 0,
             "recruits": 4
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -247,7 +247,7 @@
             "gems": 0,
             "recruits": 6
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -273,7 +273,7 @@
             "gems": 0,
             "recruits": 3
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -301,7 +301,7 @@
             "gems": 0,
             "recruits": 5
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -342,7 +342,7 @@
             "gems": 0,
             "recruits": 6
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -368,7 +368,7 @@
             "gems": 0,
             "recruits": 7
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -394,7 +394,7 @@
             "gems": 0,
             "recruits": 8
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -448,7 +448,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -500,7 +500,7 @@
             "gems": 0,
             "recruits": 5
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -528,7 +528,7 @@
             "gems": 0,
             "recruits": 6
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -556,7 +556,7 @@
             "gems": 0,
             "recruits": 6
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -597,7 +597,7 @@
             "gems": 0,
             "recruits": 5
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -703,7 +703,7 @@
             "gems": 0,
             "recruits": 8
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -758,7 +758,7 @@
             "gems": 0,
             "recruits": 9
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -786,7 +786,7 @@
             "gems": 0,
             "recruits": 11
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -841,7 +841,7 @@
             "gems": 0,
             "recruits": 9
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -896,7 +896,7 @@
             "gems": 0,
             "recruits": 10
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -948,7 +948,7 @@
             "gems": 0,
             "recruits": 14
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -987,7 +987,7 @@
             "gems": 0,
             "recruits": 11
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1028,7 +1028,7 @@
             "gems": 0,
             "recruits": 12
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1093,7 +1093,7 @@
             "gems": 0,
             "recruits": 15
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1134,7 +1134,7 @@
             "gems": 0,
             "recruits": 17
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1188,7 +1188,7 @@
             "gems": 0,
             "recruits": 2
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1243,7 +1243,7 @@
             "gems": 0,
             "recruits": 2
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1284,7 +1284,7 @@
             "gems": 0,
             "recruits": 4
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1327,7 +1327,7 @@
             "gems": 0,
             "recruits": 13
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1368,7 +1368,7 @@
             "gems": 0,
             "recruits": 18
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1394,7 +1394,7 @@
             "gems": 0,
             "recruits": 25
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1448,7 +1448,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1487,7 +1487,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1526,7 +1526,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1552,7 +1552,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1578,7 +1578,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1627,7 +1627,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1666,7 +1666,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1705,7 +1705,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1736,7 +1736,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1762,7 +1762,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1788,7 +1788,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1814,7 +1814,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1866,7 +1866,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1892,7 +1892,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1918,7 +1918,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1944,7 +1944,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -1983,7 +1983,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2009,7 +2009,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2048,7 +2048,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2099,7 +2099,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2151,7 +2151,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2190,7 +2190,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2229,7 +2229,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2268,7 +2268,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2294,7 +2294,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2333,7 +2333,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2359,7 +2359,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2400,7 +2400,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2439,7 +2439,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2491,7 +2491,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2580,7 +2580,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2638,7 +2638,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2679,7 +2679,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2704,7 +2704,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2743,7 +2743,7 @@
             "gems": 1,
             "recruits": 0
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2769,7 +2769,7 @@
             "gems": 1,
             "recruits": 0
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2795,7 +2795,7 @@
             "gems": 2,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2821,7 +2821,7 @@
             "gems": 3,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2847,7 +2847,7 @@
             "gems": 2,
             "recruits": 0
         },
-        "turnAgain": true,
+        "playAgain": true,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2869,7 +2869,7 @@
             "gems": 5,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": false,
         "sideEffects": [
             {
@@ -2895,7 +2895,7 @@
             "gems": 4,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2936,7 +2936,7 @@
             "gems": 6,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -2988,7 +2988,7 @@
             "gems": 2,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3014,7 +3014,7 @@
             "gems": 3,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3040,7 +3040,7 @@
             "gems": 4,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3066,7 +3066,7 @@
             "gems": 3,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3105,7 +3105,7 @@
             "gems": 7,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3157,7 +3157,7 @@
             "gems": 7,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3206,7 +3206,7 @@
             "gems": 6,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3232,7 +3232,7 @@
             "gems": 9,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3271,7 +3271,7 @@
             "gems": 8,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3310,7 +3310,7 @@
             "gems": 7,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3349,7 +3349,7 @@
             "gems": 10,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3375,7 +3375,7 @@
             "gems": 5,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3440,7 +3440,7 @@
             "gems": 13,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3479,7 +3479,7 @@
             "gems": 4,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3518,7 +3518,7 @@
             "gems": 12,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3557,7 +3557,7 @@
             "gems": 14,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3596,7 +3596,7 @@
             "gems": 16,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3622,7 +3622,7 @@
             "gems": 15,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3674,7 +3674,7 @@
             "gems": 17,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3715,7 +3715,7 @@
             "gems": 8,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3754,7 +3754,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3805,7 +3805,7 @@
             "gems": 0,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3857,7 +3857,7 @@
             "gems": 5,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3909,7 +3909,7 @@
             "gems": 11,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -3962,7 +3962,7 @@
             "gems": 15,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
@@ -4014,7 +4014,7 @@
             "gems": 21,
             "recruits": 0
         },
-        "turnAgain": false,
+        "playAgain": false,
         "canDiscard": true,
         "sideEffects": [
             {
