@@ -10,7 +10,7 @@ export interface Card {
     name: string;
     priorityForAI: number;
     price: Price;
-    turnAgain: boolean;
+    playAgain: boolean;
     canDiscard: boolean;
     sideEffects: SideEffect[];
 }
