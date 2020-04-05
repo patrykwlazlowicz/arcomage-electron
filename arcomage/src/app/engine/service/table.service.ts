@@ -62,14 +62,14 @@ export class TableService {
   }
 
   playerPlayCard(cardIdx: CARD_IDX, game: Game): Game {
-    return this.cardPlayingService.playCard(cardIdx, game.playerRed, game.playerBlue, game);
+    return this.cardPlayingService.playCard(cardIdx, game.playerRed, game);
   }
 
   playerDiscardCard(cardIdx: CARD_IDX, game: Game): Game {
-    return this.cardPlayingService.discardCard(cardIdx, game.playerRed, game.playerBlue, game);
+    return this.cardPlayingService.discardCard(cardIdx, game.playerRed, game);
   }
 
   playerCanPlayThisCard(cardIdx: CARD_IDX, game: Game): boolean {
-    return this.cardPlayingService.canPlayThisCard(game.playerRed, game.playerRed.cards[cardIdx]);
+    return this.cardPlayingService.canPlayThisCard(game.playerRed.cards[cardIdx], game.playerRed);
   }
 }

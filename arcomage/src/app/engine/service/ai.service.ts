@@ -25,11 +25,11 @@ export class AIService {
     while (newGame.playerBlue.isMyTurn) {
       for (let priority = 1; priority <= 4 && cardWasntPlayed; ++priority) {
         for (let i = 0; i < CARD_IDX.LENGTH && cardWasntPlayed; ++i) {
-          if (this.cardPlayingService.canPlayThisCard(newGame.playerBlue, newGame.playerBlue.cards[i]) &&
+          if (this.cardPlayingService.canPlayThisCard(newGame.playerBlue.cards[i], newGame.playerBlue) &&
             newGame.playerBlue.cards[i].priorityForAI == priority
           ) {
             cardWasntPlayed = true;
-            newGame = this.cardPlayingService.playCard(i, newGame.playerBlue, newGame.playerRed, newGame);
+            newGame = this.cardPlayingService.playCard(i, newGame.playerBlue, newGame);
           }
         }
       }
@@ -37,7 +37,7 @@ export class AIService {
         for (let i = 0; i < CARD_IDX.LENGTH && cardWasntPlayed; ++i) {
           if (newGame.playerBlue.cards[i].priorityForAI == priority) {
             cardWasntPlayed = true;
-            newGame = this.cardPlayingService.discardCard(i, newGame.playerBlue, newGame.playerRed, newGame);
+            newGame = this.cardPlayingService.discardCard(i, newGame.playerBlue, newGame);
           }
         }
       }

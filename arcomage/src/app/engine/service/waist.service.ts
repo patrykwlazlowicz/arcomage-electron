@@ -19,7 +19,7 @@ export class WaistService {
   dealCards(waist: Card[]): DealCards {
     const playerRed: Card[] = [];
     const playerBlue: Card[] = [];
-    let newWaist: Card[] = _.slice(waist);
+    let newWaist: Card[] = _.cloneDeep(waist);
     for (let i = 0, nextCardFromWaist; i < CARD_IDX.LENGTH; ++i) {
       nextCardFromWaist = this.nextCardFromWaist(newWaist, []);
       playerRed.push(nextCardFromWaist.card);
@@ -36,8 +36,8 @@ export class WaistService {
   }
 
   nextCardFromWaist(waist: Card[], discardedWaist: Card[]): NextCardFromWaist {
-    let newWaist = _.slice(waist);
-    let newDiscardedWaist = _.slice(discardedWaist);
+    let newWaist = _.cloneDeep(waist);
+    let newDiscardedWaist = _.cloneDeep(discardedWaist);
     if (_.isEmpty(waist)) {
       newWaist = _.shuffle(newDiscardedWaist);
       newDiscardedWaist = [];

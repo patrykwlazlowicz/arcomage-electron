@@ -12,6 +12,7 @@ export class ConditionService {
   private conditionsRegister: Map<string, Condition> = new Map<string, Condition>();
 
   constructor() {
+    // TODO refactor
     this.conditionsRegister.set(NoCondition.TYPE, new NoCondition());
     this.conditionsRegister.set(CompareWithOpponentCondition.TYPE, new CompareWithOpponentCondition());
     this.conditionsRegister.set(CompareWithValueCondition.TYPE, new CompareWithValueCondition());

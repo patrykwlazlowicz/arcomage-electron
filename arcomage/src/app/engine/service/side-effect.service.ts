@@ -8,6 +8,7 @@ import { Damage } from './side-effect/damage';
 import { AlignResources } from './side-effect/align-resources';
 import { SwapResources } from './side-effect/swap-resources';
 import { DiscardCard } from './side-effect/discard-card';
+import * as _ from 'lodash';
 
 @Injectable()
 export class SideEffectService {
@@ -15,6 +16,7 @@ export class SideEffectService {
   private sideEffectsRegister: Map<string, SideEffect> = new Map<string, SideEffect>();
 
   constructor(private conditionService: ConditionService) {
+    // TODO refactor specific Effect should add itself to register
     this.sideEffectsRegister.set(ChangeValue.TYPE, new ChangeValue());
     this.sideEffectsRegister.set(Damage.TYPE, new Damage());
     this.sideEffectsRegister.set(AlignResources.TYPE, new AlignResources());
@@ -25,8 +27,8 @@ export class SideEffectService {
   executeEffect(sideEffectModel: SideEffectModel, leader: Player, opponent: Player) {
     if (this.conditionService.checkCondition(leader, opponent, sideEffectModel.condition)) {
       const subject: Player = sideEffectModel.effectForOpponent ? opponent : leader;
-      const opponentForSubjecty: Player = sideEffectModel.effectForOpponent ? leader : opponent;
-      this.sideEffectsRegister.get(sideEffectModel.type).execute(subject, opponentForSubjecty, sideEffectModel.effectProperty);
+      const opponentForSubject: Player = sideEffectModel.effectForOpponent ? leader : opponent;
+      this.sideEffectsRegister.get(sideEffectModel.type).execute(subject, opponentForSubject, sideEffectModel.effectProperty);
     }
   }
 
