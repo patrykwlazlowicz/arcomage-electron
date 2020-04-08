@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
-import { ResourcesLabelComponent } from './resources-label/resources-label.component';
-import { ResourcesComponent } from './resources/resources.component';
+import { ResourceLabelComponent } from './resource-label/resource-label.component';
+import { ResourceComponent } from './resource/resource.component';
 import { GameComponent } from './game.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { EngineModule } from 'src/app/engine/engine.module';
+import { CastleComponent } from './castle/castle.component';
 
 
 
 @NgModule({
   declarations: [
-    ResourcesLabelComponent,
-    ResourcesComponent,
-    GameComponent
+    GameComponent,
+    ResourceLabelComponent,
+    ResourceComponent,
+    CastleComponent
   ],
   exports: [
     GameComponent

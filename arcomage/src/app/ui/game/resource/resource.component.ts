@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ResourcesSide } from '../../enum/resources-side.enum';
 
 @Component({
-  selector: 'game-resources',
-  templateUrl: './resources.component.html',
-  styleUrls: ['./resources.component.css']
+  selector: 'game-resource',
+  templateUrl: './resource.component.html',
+  styleUrls: ['./resource.component.css']
 })
-export class ResourcesComponent implements OnInit {
+export class ResourceComponent implements OnInit {
 
   RESOURCES_SIDE: typeof ResourcesSide = ResourcesSide;
 
