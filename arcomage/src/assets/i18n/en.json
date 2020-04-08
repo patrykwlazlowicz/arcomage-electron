@@ -1,4 +1,6 @@
 {
     "game.resources.state": "State",
-    "game.resources.growth": "Growth"
+    "game.resources.growth": "Growth",
+    "game.castle.tower": "Tower",
+    "game.castle.wall": "Wall"
 }
