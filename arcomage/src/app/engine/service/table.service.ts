@@ -5,8 +5,8 @@ import { Game } from '../model/game';
 import { CARD_IDX } from '../enum/card-idx.enum';
 import { WaistService } from './waist.service';
 import { DealCards, NextCardFromWaist } from '../util/waist-dealings';
-import { SideEffectService } from './side-effect.service';
 import { CardPlayingService } from './card-playing.service';
+import _ from 'lodash';
 
 @Injectable()
 export class TableService {
@@ -18,26 +18,22 @@ export class TableService {
 
   createGame(initialTowerHeight: number,
     initialWallHeight: number,
-    initialBricksState: number,
-    initialBricksGrowth: number,
-    initialGemsState: number,
-    initialGemsGrowth: number,
-    initialRecruitsState: number,
-    initialRecruitsGrowth: number,
+    initialRsourcesState: number,
+    initialGrowthGrowth: number,
     towerHeightForWin: number): Game {
     const waist: Card[] = this.waistService.createWaist();
     const playerRed: Player = {
       bricks: {
-        state: initialBricksState,
-        growth: initialBricksGrowth
+        state: initialRsourcesState,
+        growth: initialGrowthGrowth
       },
       gems: {
-        state: initialGemsState,
-        growth: initialGemsGrowth
+        state: initialRsourcesState,
+        growth: initialGrowthGrowth
       },
       recruits: {
-        state: initialRecruitsState,
-        growth: initialRecruitsGrowth
+        state: initialRsourcesState,
+        growth: initialGrowthGrowth
       },
       castle: {
         tower: initialTowerHeight,
@@ -47,7 +43,7 @@ export class TableService {
       haveCardToDiscard: 0,
       cards: []
     };
-    const playerBlue: Player = { ...playerRed };
+    const playerBlue: Player = _.cloneDeep(playerRed);
     playerRed.isMyTurn = true;
     const dealCards: DealCards = this.waistService.dealCards(waist);
     playerRed.cards = dealCards.playerRed;
