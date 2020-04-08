@@ -12,9 +12,8 @@ let win = null;
 
 app.on('ready', function () {
 
-  // Initialize the window to our specified dimensions
-  win = new BrowserWindow({width: 1024, height: 768});
-
+  win = new BrowserWindow({show: false});
+  
   // Specify entry point
   if (process.env.PACKAGE === 'true'){
     win.loadURL(url.format({
@@ -26,6 +25,9 @@ app.on('ready', function () {
     win.loadURL(process.env.HOST);
     win.webContents.openDevTools();
   }
+  
+  win.maximize();
+  win.show();
 
   // Remove window once app is closed
   win.on('closed', function () {

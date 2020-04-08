@@ -1,20 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EngineModule } from './engine/engine.module';
+import { GameModule } from './ui/game/game.module';
+import { createTranslateLoader } from './shared/lib/translate-file-loader';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    NgbModule,
     BrowserModule,
     AppRoutingModule,
-    EngineModule
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader)
+      },
+      useDefaultLang: true,
+      defaultLanguage: 'en'
+    }),
+    GameModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,6 @@ import { TableService } from './engine/service/table.service';
 export class AppComponent {
   title = 'arcomage';
 
-  constructor(private tableService: TableService) {
+  constructor() {
   }
 }

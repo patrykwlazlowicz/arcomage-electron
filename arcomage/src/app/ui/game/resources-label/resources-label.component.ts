@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-resources-label',
+  selector: 'game-resources-label',
   templateUrl: './resources-label.component.html',
   styleUrls: ['./resources-label.component.css']
 })
 export class ResourcesLabelComponent implements OnInit {
 
-  title: string;
-  value: string;
+  @Input() title: string;
+  @Input() value: string;
 
   constructor() { }
 

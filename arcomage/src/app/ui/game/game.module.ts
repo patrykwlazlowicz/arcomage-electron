@@ -1,13 +1,24 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ResourcesLabelComponent } from './resources-label/resources-label.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { GameComponent } from './game.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { EngineModule } from 'src/app/engine/engine.module';
 
 
 
 @NgModule({
-  declarations: [ResourcesLabelComponent],
+  declarations: [
+    ResourcesLabelComponent,
+    ResourcesComponent,
+    GameComponent
+  ],
+  exports: [
+    GameComponent
+  ],
   imports: [
-    CommonModule
+    SharedModule,
+    EngineModule
   ]
 })
 export class GameModule { }
