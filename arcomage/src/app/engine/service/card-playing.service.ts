@@ -47,7 +47,6 @@ export class CardPlayingService {
     // sprawdz game.state
     let gameClone: GameClone = this.createGameClone(cardIdx, leader, game);
     if (gameClone.leader.isMyTurn) {
-      const discardedCard: Card = leader.cards[cardIdx];
       gameClone = this.discardPlayedCard(cardIdx, gameClone.leader, gameClone.game);
       gameClone = this.givePlayerNextCard(cardIdx, gameClone.leader, gameClone.game);
       gameClone = this.swapTurnAfterDiscardCard(cardIdx, gameClone.leader, gameClone.game);
@@ -75,7 +74,7 @@ export class CardPlayingService {
   // TODO create aspect decorator for cloning
   private createGameClone(cardIdx: CARD_IDX, leader: Player, game: Game): GameClone {
     const gameClone: Game = _.cloneDeep(game);
-    const newLeader: Player = leader === game.playerRed ? gameClone.playerRed : gameClone.playerBlue;
+    const newLeader: Player = (leader === game.playerRed ? gameClone.playerRed : gameClone.playerBlue);
     return {
       game: gameClone,
       leader: newLeader,

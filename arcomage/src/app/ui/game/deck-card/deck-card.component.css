@@ -1,0 +1,18 @@
+.game-deck-card {
+    height: 100%;
+}
+
+.game-deck-card-image {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 60%;
+}
+  
+.game-deck-card-image:hover {
+    padding-bottom: 10px;
+} 
+
+.game-deck-card-image-cant-afford {
+    opacity: 0.5;
+    padding-bottom: 0 !important;
+}

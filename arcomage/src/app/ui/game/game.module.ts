@@ -5,6 +5,8 @@ import { GameComponent } from './game.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { EngineModule } from 'src/app/engine/engine.module';
 import { CastleComponent } from './castle/castle.component';
+import { DeckComponent } from './deck/deck.component';
+import { DeckCardComponent } from './deck-card/deck-card.component';
 
 
 
@@ -13,7 +15,9 @@ import { CastleComponent } from './castle/castle.component';
     GameComponent,
     ResourceLabelComponent,
     ResourceComponent,
-    CastleComponent
+    CastleComponent,
+    DeckComponent,
+    DeckCardComponent
   ],
   exports: [
     GameComponent

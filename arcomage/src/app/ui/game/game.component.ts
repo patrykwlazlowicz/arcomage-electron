@@ -16,12 +16,14 @@ export class GameComponent implements OnInit {
 
   game: Game;
 
-  constructor(private tableServce: TableService ) { }
+  constructor(private tableService: TableService ) { }
 
   ngOnInit(): void {
-    this.game = this.tableServce.createGame(25, 10, 15, 1, 50);
-    console.log(this.game);
-    
+    this.game = this.tableService.createGame(25, 10, 5, 1, 50);
+  }
+
+  playCard(event: any) {
+    console.log(event);    
   }
 
 }
