@@ -1,4 +1,4 @@
-export interface Castle {
+export interface CastleDTO {
     tower: number;
     wall: number;
 }

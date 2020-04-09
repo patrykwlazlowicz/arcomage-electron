@@ -1,12 +1,12 @@
 import { Condition } from './condition';
-import { Player } from '../../model/player';
+import { PlayerDTO } from '../../dto/player-dto';
 
 
 export class NoCondition implements Condition {
 
   static TYPE: string = "NO_CONDITION";
 
-  check(leader: Player, opponent: Player, conditionProperty: any): boolean {
+  check(leader: PlayerDTO, opponent: PlayerDTO, conditionProperty: any): boolean {
     return true;
   }
 }

@@ -1,4 +1,4 @@
-import { SideEffect } from './side-effect';
+import { SideEffectDTO } from './side-effect-dto';
 
 interface Price {
     bricks: number;
@@ -6,11 +6,11 @@ interface Price {
     recruits: number;
 }
 
-export interface Card {
+export interface CardDTO {
     name: string;
     priorityForAI: number;
     price: Price;
     playAgain: boolean;
     canDiscard: boolean;
-    sideEffects: SideEffect[];
+    sideEffects: SideEffectDTO[];
 }

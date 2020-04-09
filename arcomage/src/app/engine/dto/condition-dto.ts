@@ -1,4 +1,4 @@
-export interface Condition {
+export interface ConditionDTO {
     type: string;
     conditionProperty?: any;
 }

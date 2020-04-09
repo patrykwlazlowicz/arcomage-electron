@@ -1592,12 +1592,13 @@
                         "operation": "LESS_THAN"
                     }
                 },
+                "type": "CHANGE_VALUE",
                 "effectForOpponent": false,
-                "what": "bricks",
-                "property": "growth",
-                "value": 2,
-                "specialEffect": null,
-                "specialEffectProperty": null
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": 2
+                }
             },
             {
                 "condition": {
@@ -1610,12 +1611,13 @@
                         "operation": "GREATER_OR_EQUAL"
                     }
                 },
+                "type": "CHANGE_VALUE",
                 "effectForOpponent": false,
-                "what": "bricks",
-                "property": "growth",
-                "value": 1,
-                "specialEffect": null,
-                "specialEffectProperty": null
+                "effectProperty": {
+                    "what": "bricks",
+                    "property": "growth",
+                    "value": 1
+                }
             }
         ]
     },

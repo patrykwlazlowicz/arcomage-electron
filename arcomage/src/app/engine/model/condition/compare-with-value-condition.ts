@@ -1,5 +1,5 @@
 import { Condition } from './condition';
-import { Player } from '../../model/player';
+import { PlayerDTO } from '../../dto/player-dto';
 import { OperationHelper } from '../../util/operation-helper';
 import { OPERATION } from '../../enum/operation.enum';
 
@@ -15,8 +15,8 @@ export class CompareWithValueCondition implements Condition {
 
   static TYPE: string = "COMPARE_WITH_VALUE";
 
-  check(leader: Player, opponent: Player, conditionProperty: ConditionProperty): boolean {
-    const subject: Player = conditionProperty.conditionForOpponent ? opponent : leader;
+  check(leader: PlayerDTO, opponent: PlayerDTO, conditionProperty: ConditionProperty): boolean {
+    const subject: PlayerDTO = conditionProperty.conditionForOpponent ? opponent : leader;
     return OperationHelper.Evaluate(
       subject[conditionProperty.what][conditionProperty.property],
       conditionProperty.value,

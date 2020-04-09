@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Game } from '../model/game';
-import { TableService } from './table.service';
-import { CardPlayingService } from './card-playing.service';
+import { GameDTO } from '../dto/game-dto';
 import { CARD_IDX } from '../enum/card-idx.enum';
-import { Card } from '../model/card';
-import { Player } from '../model/player';
+import { CardDTO } from '../dto/card-dto';
+import { PlayerDTO } from '../dto/player-dto';
+import { Game } from '../model/game';
+import _ from 'lodash';
 
 interface CardPoints {
   idx: CARD_IDX;
@@ -16,36 +16,33 @@ interface CardPoints {
 @Injectable()
 export class AIService {
 
-  constructor(private tableService: TableService,
-    private cardPlayingService: CardPlayingService) { }
+  constructor() { }
 
-  playPoorAI(game: Game): Game {
-    let newGame = { ...game };
+  playPoorAI(gameDTO: GameDTO): GameDTO {
+    const game: Game = <Game> gameDTO;
     let cardWasntPlayed = true;
-    while (newGame.playerBlue.isMyTurn) {
+    while (game.playerBlue.isMyTurn) {
       for (let priority = 1; priority <= 4 && cardWasntPlayed; ++priority) {
         for (let i = 0; i < CARD_IDX.LENGTH && cardWasntPlayed; ++i) {
-          if (this.cardPlayingService.canPlayThisCard(newGame.playerBlue.cards[i], newGame.playerBlue) &&
-            newGame.playerBlue.cards[i].priorityForAI == priority
-          ) {
-            cardWasntPlayed = true;
-            newGame = this.cardPlayingService.playCard(i, newGame.playerBlue, newGame);
+          if (game.canPlayThisCard(game.playerBlue.cards[i], game.playerBlue) && game.playerBlue.cards[i].priorityForAI == priority ) {
+            cardWasntPlayed = false;
+            game.playCard(i, game.playerBlue, game.playerRed);
           }
         }
       }
       for (let priority = 5; priority >= 1 && cardWasntPlayed; --priority) {
         for (let i = 0; i < CARD_IDX.LENGTH && cardWasntPlayed; ++i) {
-          if (newGame.playerBlue.cards[i].priorityForAI == priority) {
-            cardWasntPlayed = true;
-            newGame = this.cardPlayingService.discardCard(i, newGame.playerBlue, newGame);
+          if (game.playerBlue.cards[i].priorityForAI == priority) {
+            cardWasntPlayed = false;
+            game.discardCard(i, game.playerBlue, game.playerRed);
           }
         }
       }
     }
-    return newGame;
+    return _.cloneDeep(game);
   }
 
-  private play(game: Game): Game {
+  private play(game: GameDTO): GameDTO {
     let newGame = { ...game };
     while (newGame.playerBlue.isMyTurn) {
       while (newGame.playerBlue.haveCardToDiscard) {
@@ -60,7 +57,7 @@ export class AIService {
     return newGame;
   }
 
-  private calculateCardToDiscard(cards: Card[], game: Game): CardPoints[] {
+  private calculateCardToDiscard(cards: CardDTO[], game: GameDTO): CardPoints[] {
     const calculatedCardPoints: CardPoints[] = [];
     // zrób mocki playerów
     for (let card of cards) {
@@ -68,7 +65,7 @@ export class AIService {
     return calculatedCardPoints;
   }
 
-  private calculateCardToPlay(cards: Card[], game: Game): CardPoints[] {
+  private calculateCardToPlay(cards: CardDTO[], game: GameDTO): CardPoints[] {
     const calculatedCardPoints: CardPoints[] = [];
     // zrób mocki playerów
     // filtruj po przegrywających
@@ -78,7 +75,7 @@ export class AIService {
     return calculatedCardPoints;
   }
 
-  private calculateCardEffect(leader: Player, opponent: Player): CardPoints {
+  private calculateCardEffect(leader: PlayerDTO, opponent: PlayerDTO): CardPoints {
     return null;
   }
 }
