@@ -1,4 +1,8 @@
-.game-container {
+.game-resource-container {
     padding-top: 5%;
     min-height: 70%;
+}
+
+.game-deck-container {
+    min-height: 30%;
 }

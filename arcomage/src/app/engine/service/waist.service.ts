@@ -19,19 +19,21 @@ export class WaistService {
   dealCards(waist: Card[]): DealCards {
     const playerRed: Card[] = [];
     const playerBlue: Card[] = [];
-    let newWaist: Card[] = _.cloneDeep(waist);
-    for (let i = 0, nextCardFromWaist; i < CARD_IDX.LENGTH; ++i) {
-      nextCardFromWaist = this.nextCardFromWaist(newWaist, []);
+    let nextCardFromWaist: NextCardFromWaist = {
+      card: null,
+      waist: _.cloneDeep(waist),
+      discardedWaist: []
+    };
+    for (let i = 0; i < CARD_IDX.LENGTH; ++i) {
+      nextCardFromWaist = this.nextCardFromWaist(nextCardFromWaist.waist, []);
       playerRed.push(nextCardFromWaist.card);
-      newWaist = nextCardFromWaist.waist;
-      nextCardFromWaist = this.nextCardFromWaist(newWaist, []);
-      playerRed.push(nextCardFromWaist.card);
-      newWaist = nextCardFromWaist.waist;
+      nextCardFromWaist = this.nextCardFromWaist(nextCardFromWaist.waist, []);
+      playerBlue.push(nextCardFromWaist.card);
     }
     return {
       playerRed,
       playerBlue,
-      waist: newWaist
+      waist: nextCardFromWaist.waist
     }
   }
 

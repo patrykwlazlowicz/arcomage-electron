@@ -1,0 +1,6 @@
+<div class="row game-deck">
+    <div class="col-2" *ngFor="let card of game.playerRed.cards; index as idx;">
+        <game-deck-card [imgName]="card.name" [cardIdx]="idx" [canAfford]="canAffordCard(idx)"
+            (playCard)="playCard.emit($event)"></game-deck-card>
+    </div>
+</div>

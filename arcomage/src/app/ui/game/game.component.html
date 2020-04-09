@@ -1,27 +1,42 @@
-<div class="row game-container">
+<div class="row game-resource-container">
     <div class="col-2">
-        <game-resource [imgName]="GAME_IMAGES.BRICKS" [growth]="game.playerRed.bricks.growth" [state]="game.playerRed.bricks.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.GEMS" [growth]="game.playerRed.gems.growth" [state]="game.playerRed.gems.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [growth]="game.playerRed.recruits.growth" [state]="game.playerRed.recruits.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
+        <game-resource [imgName]="GAME_IMAGES.BRICKS" [growth]="game.playerRed.bricks.growth"
+            [state]="game.playerRed.bricks.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
+        <game-resource [imgName]="GAME_IMAGES.GEMS" [growth]="game.playerRed.gems.growth"
+            [state]="game.playerRed.gems.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
+        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [growth]="game.playerRed.recruits.growth"
+            [state]="game.playerRed.recruits.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.TOWER_RED" [elementTitle]="'game.castle.tower'" [state]="game.playerRed.castle.tower"></game-castle>
+        <game-castle [imgName]="GAME_IMAGES.TOWER_RED" [elementTitle]="'game.castle.tower'"
+            [state]="game.playerRed.castle.tower"></game-castle>
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="'game.castle.wall'" [state]="game.playerRed.castle.wall"></game-castle>
+        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="'game.castle.wall'"
+            [state]="game.playerRed.castle.wall"></game-castle>
     </div>
     <div class="col-4">
         <!-- SEPARATOR -->
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="'game.castle.wall'" [state]="game.playerBlue.castle.wall"></game-castle>
+        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="'game.castle.wall'"
+            [state]="game.playerBlue.castle.wall"></game-castle>
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.TOWER_BLUE" [elementTitle]="'game.castle.tower'" [state]="game.playerBlue.castle.tower"></game-castle>
+        <game-castle [imgName]="GAME_IMAGES.TOWER_BLUE" [elementTitle]="'game.castle.tower'"
+            [state]="game.playerBlue.castle.tower"></game-castle>
     </div>
     <div class="col-2">
-        <game-resource [imgName]="GAME_IMAGES.BRICKS" [growth]="game.playerBlue.bricks.growth" [state]="game.playerBlue.bricks.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.GEMS" [growth]="game.playerBlue.gems.growth" [state]="game.playerBlue.gems.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [growth]="game.playerBlue.recruits.growth" [state]="game.playerBlue.recruits.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
+        <game-resource [imgName]="GAME_IMAGES.BRICKS" [growth]="game.playerBlue.bricks.growth"
+            [state]="game.playerBlue.bricks.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
+        <game-resource [imgName]="GAME_IMAGES.GEMS" [growth]="game.playerBlue.gems.growth"
+            [state]="game.playerBlue.gems.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
+        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [growth]="game.playerBlue.recruits.growth"
+            [state]="game.playerBlue.recruits.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
+    </div>
+</div>
+<div class="row game-deck-container">
+    <div class=col-12>
+        <game-deck [game]="game" (playCard)="playCard($event)"></game-deck>
     </div>
 </div>
