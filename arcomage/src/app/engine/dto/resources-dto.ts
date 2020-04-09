@@ -1,4 +1,4 @@
-export interface Resources {
+export interface ResourcesDTO {
     state: number;
     growth: number;
 }

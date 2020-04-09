@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Game } from 'src/app/engine/model/game';
+import { GameDTO } from 'src/app/engine/dto/game-dto';
 import { TableService } from 'src/app/engine/service/table.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TableService } from 'src/app/engine/service/table.service';
 })
 export class DeckComponent implements OnInit {
 
-  @Input() game: Game;
+  @Input() game: GameDTO;
 
   @Output() playCard: EventEmitter<number> = new EventEmitter();
 
