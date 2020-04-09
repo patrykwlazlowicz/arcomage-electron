@@ -1,4 +1,4 @@
-import { SideEffect, SideEffectResult } from './side-effect';
+import { SideEffect } from './side-effect';
 import { PlayerDTO } from '../../dto/player-dto';
 import * as _ from 'lodash';
 
@@ -14,18 +14,13 @@ export class Damage implements SideEffect {
 
     static TYPE: string = "DAMAGE";
 
-    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty): SideEffectResult {
-        const result: SideEffectResult = {
-            subject: _.cloneDeep(subject),
-            opponentForSubject: _.cloneDeep(opponentForSubject)
+    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty) {
+        subject[sideEffectProperty.what][sideEffectProperty.property] += sideEffectProperty.value;
+        if (subject[sideEffectProperty.what][sideEffectProperty.property] < 0) {
+            const secondWave: number = subject[sideEffectProperty.what][sideEffectProperty.property];
+            subject[sideEffectProperty.secondWaveDamageWhat][sideEffectProperty.secondWaveDamageProperty] += secondWave;
+            subject[sideEffectProperty.what][sideEffectProperty.property] = 0;
         }
-        result.subject[sideEffectProperty.what][sideEffectProperty.property] += sideEffectProperty.value;
-        if (result.subject[sideEffectProperty.what][sideEffectProperty.property] < 0) {
-            const secondWave: number = result.subject[sideEffectProperty.what][sideEffectProperty.property];
-            result.subject[sideEffectProperty.secondWaveDamageWhat][sideEffectProperty.secondWaveDamageProperty] += secondWave;
-            result.subject[sideEffectProperty.what][sideEffectProperty.property] = 0;
-        }
-        return result;
     }
 
 }

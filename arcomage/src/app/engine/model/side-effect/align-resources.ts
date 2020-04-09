@@ -1,4 +1,4 @@
-import { SideEffect, SideEffectResult } from './side-effect';
+import { SideEffect } from './side-effect';
 import { PlayerDTO } from '../../dto/player-dto';
 import * as _ from 'lodash';
 
@@ -11,13 +11,8 @@ export class AlignResources implements SideEffect {
 
     static TYPE: string = "ALIGN_RESOURCES";
 
-    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty): SideEffectResult {
-        const result: SideEffectResult = {
-            subject: _.cloneDeep(subject),
-            opponentForSubject: _.cloneDeep(opponentForSubject)
-        }
-        result.subject[sideEffectProperty.what][sideEffectProperty.property] = result.opponentForSubject[sideEffectProperty.what][sideEffectProperty.property];
-        return result;
+    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty) {
+        subject[sideEffectProperty.what][sideEffectProperty.property] = opponentForSubject[sideEffectProperty.what][sideEffectProperty.property];
     }
 
 }
