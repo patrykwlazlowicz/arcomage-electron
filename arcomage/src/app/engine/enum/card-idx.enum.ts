@@ -1,4 +1,4 @@
-export enum CARD_IDX {
+export enum CardIdx {
 	ONE = 0,
 	TWO = 1,
 	THREE = 2,

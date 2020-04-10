@@ -2,15 +2,19 @@ import { GameDTO } from '../dto/game-dto';
 import { PlayerDTO } from '../dto/player-dto';
 import { SideEffectExecutor } from './side-effect-executor';
 import { Waist } from './waist';
-import { CARD_IDX } from '../enum/card-idx.enum';
+import { CardIdx } from '../enum/card-idx.enum';
 import _ from 'lodash';
 import { CardDTO } from '../dto/card-dto';
+import { UsedCardDTO } from '../dto/used-card-dto';
+import { UsedAction } from '../enum/used-action.enum';
+import { UsedBySide } from '../enum/used-by-side.enum';
 
 export class Game implements GameDTO {
     waist: Waist;
     playerRed: PlayerDTO;
     playerBlue: PlayerDTO;
     towerHeightForWin: number;
+    lastUsedCards: UsedCardDTO[];
 
     private sideEffectExecutor: SideEffectExecutor = new SideEffectExecutor();
 
@@ -21,7 +25,7 @@ export class Game implements GameDTO {
         this.towerHeightForWin = towerHeightForWin;
     }
 
-    playCard(cardIdx: CARD_IDX, leader: PlayerDTO, opponent: PlayerDTO) {
+    playCard(cardIdx: CardIdx, leader: PlayerDTO, opponent: PlayerDTO) {
         // sprawdz game.state
         if (leader.isMyTurn) {
             const playedCard = leader.cards[cardIdx];
@@ -34,13 +38,14 @@ export class Game implements GameDTO {
                 }
                 this.swapTurnAfterPlayCard(playedCard, leader, opponent);
                 // sprawdzić wygraną
+                this.addLastPlayedCard(playedCard, leader, UsedAction.PLAY);
             }
         } else {
             throw Error("Engine failure");
         }
     }
 
-    discardCard(cardIdx: CARD_IDX, leader: PlayerDTO, opponent: PlayerDTO) {
+    discardCard(cardIdx: CardIdx, leader: PlayerDTO, opponent: PlayerDTO) {
         // sprawdz game.state
         if (leader.isMyTurn) {
             const playedCard = leader.cards[cardIdx];
@@ -48,6 +53,7 @@ export class Game implements GameDTO {
                 this.discardPlayedCard(playedCard);
                 this.givePlayerNextCard(cardIdx, leader);
                 this.swapTurnAfterDiscardCard(leader, opponent);
+                this.addLastPlayedCard(playedCard, leader, UsedAction.DISCARD);
             }
         } else {
             throw Error("Engine failure");
@@ -60,7 +66,7 @@ export class Game implements GameDTO {
             player.recruits.state >= card.price.recruits;
     }
 
-    mockPlayCard(cardIdx: CARD_IDX, leader: PlayerDTO, opponent: PlayerDTO): GameDTO {
+    mockPlayCard(cardIdx: CardIdx, leader: PlayerDTO, opponent: PlayerDTO): GameDTO {
         const gameClone: Game = _.cloneDeep(this);
         const leaderClone: PlayerDTO = (_.isEqual(gameClone.playerRed, leader) ? gameClone.playerRed : gameClone.playerBlue);
         const opponentClone: PlayerDTO = (_.isEqual(gameClone.playerBlue, opponent) ? gameClone.playerRed : gameClone.playerBlue);
@@ -81,7 +87,7 @@ export class Game implements GameDTO {
         this.waist.discardedWaist.push(card);
     }
 
-    private givePlayerNextCard(cardIdx: CARD_IDX, leader: PlayerDTO) {
+    private givePlayerNextCard(cardIdx: CardIdx, leader: PlayerDTO) {
         const nextCard: CardDTO = this.waist.nextCard();
         leader.cards[cardIdx] = nextCard;
     }
@@ -110,5 +116,13 @@ export class Game implements GameDTO {
         opponent.bricks.state += opponent.bricks.growth;
         opponent.gems.state += opponent.gems.growth;
         opponent.recruits.state += opponent.recruits.growth;
+    }
+
+    private addLastPlayedCard(card: CardDTO, leader: PlayerDTO, usedAction: UsedAction) {
+        this.lastUsedCards.push(<UsedCardDTO>{
+            usedBySide: (_.isEqual(this.playerRed, leader) ? UsedBySide.PLAYER_RED : UsedBySide.PLAYER_BLUE),
+            usedAction,
+            card
+        });
     }
 }

@@ -2,5 +2,10 @@
     "game.resources.state": "State",
     "game.resources.growth": "Growth",
     "game.castle.tower": "Tower",
-    "game.castle.wall": "Wall"
+    "game.castle.wall": "Wall",
+    "game.msg.player.red.play": "You play this card",
+    "game.msg.player.red.discard": "You discard this card",
+    "game.msg.player.red.have.to.discard": "You must discard this card",
+    "game.msg.player.blue.play": "Opponent play this card",
+    "game.msg.player.blue.discard": "Opponent discard a card"
 }

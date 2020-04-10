@@ -1,0 +1,14 @@
+<div class="game-overlay" [ngClass]="{'game-overlay-hide': hideOverlay, 'game-overlay-show': showOverlay}" (transitionend)="overlayClosed($event)">
+    <div class="row game-overlay-row" *ngIf="currentMessage">
+        <div class="col-12 text-center">
+            <p class="game-overlay-message">{{currentMessage.messageKey | translate}}</p>
+        </div>
+    </div>
+    <div class="row game-overlay-row" *ngIf="currentMessage && currentMessage.messageImageName">
+        <div class="col-5"></div>
+        <div class="col-2 text-center">
+            <img src="{{GAME_IMAGES.ASSETS_PATH + currentMessage.messageImageName + '.jpg'}}" class="game-overlay-card-image"/>
+        </div>
+        <div class="col-5"></div>
+    </div>
+</div>

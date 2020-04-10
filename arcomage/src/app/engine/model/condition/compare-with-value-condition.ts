@@ -1,13 +1,13 @@
 import { Condition } from './condition';
 import { PlayerDTO } from '../../dto/player-dto';
 import { OperationHelper } from '../../util/operation-helper';
-import { OPERATION } from '../../enum/operation.enum';
+import { Operation } from '../../enum/operation.enum';
 
 interface ConditionProperty {
   conditionForOpponent: boolean;
   what: string;
   property: string;
-  operation: OPERATION;
+  operation: Operation;
   value: number;
 }
 

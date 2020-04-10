@@ -1,4 +1,4 @@
-export enum OPERATION {
+export enum Operation {
     EQUAL = "EQUAL",
     NOT_EQUAL = "NOT_EQUAL",
     LESS_THAN = "LESS_THAN",

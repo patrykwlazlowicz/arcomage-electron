@@ -7,6 +7,7 @@ import { EngineModule } from 'src/app/engine/engine.module';
 import { CastleComponent } from './castle/castle.component';
 import { DeckComponent } from './deck/deck.component';
 import { DeckCardComponent } from './deck-card/deck-card.component';
+import { OverlayComponent } from './overlay/overlay.component';
 
 
 
@@ -17,7 +18,8 @@ import { DeckCardComponent } from './deck-card/deck-card.component';
     ResourceComponent,
     CastleComponent,
     DeckComponent,
-    DeckCardComponent
+    DeckCardComponent,
+    OverlayComponent
   ],
   exports: [
     GameComponent

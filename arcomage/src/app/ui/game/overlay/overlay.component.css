@@ -1,0 +1,38 @@
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    visibility: hidden;
+}
+
+.game-overlay-show {
+    visibility: visible;
+}
+
+.game-overlay-hide {
+    visibility: hidden;
+    opacity: 0;
+    transition-property: (visibility, opacity);
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+.game-overlay-row {
+    margin: 0 !important;
+}
+
+.game-overlay-message {
+    color: wheat;
+    font-size: xx-large;
+    font-style: italic;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.game-overlay-card-image {
+    width: 60%;
+}

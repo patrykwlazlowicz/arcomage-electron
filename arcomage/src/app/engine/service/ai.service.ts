@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { GameDTO } from '../dto/game-dto';
-import { CARD_IDX } from '../enum/card-idx.enum';
+import { CardIdx } from '../enum/card-idx.enum';
 import { CardDTO } from '../dto/card-dto';
 import { PlayerDTO } from '../dto/player-dto';
 import { Game } from '../model/game';
 import _ from 'lodash';
 
 interface CardPoints {
-  idx: CARD_IDX;
+  idx: CardIdx;
   points: number;
   isWinnigCard: boolean;
   isLoosingCard: boolean;
@@ -19,11 +19,12 @@ export class AIService {
   constructor() { }
 
   playPoorAI(gameDTO: GameDTO): GameDTO {
-    const game: Game = <Game> gameDTO;
+    const game: Game = _.cloneDeep(<Game> gameDTO);
+    game.lastUsedCards = [];
     while (game.playerBlue.isMyTurn) {
       let cardWasntPlayed = true;
       for (let priority = 1; priority <= 4 && cardWasntPlayed; ++priority) {
-        for (let i = 0; i < CARD_IDX.LENGTH && cardWasntPlayed; ++i) {
+        for (let i = 0; i < CardIdx.LENGTH && cardWasntPlayed; ++i) {
           if (game.canPlayThisCard(game.playerBlue.cards[i], game.playerBlue) && game.playerBlue.cards[i].priorityForAI == priority ) {
             cardWasntPlayed = false;
             game.playCard(i, game.playerBlue, game.playerRed);
@@ -31,7 +32,7 @@ export class AIService {
         }
       }
       for (let priority = 5; priority >= 1 && cardWasntPlayed; --priority) {
-        for (let i = 0; i < CARD_IDX.LENGTH && cardWasntPlayed; ++i) {
+        for (let i = 0; i < CardIdx.LENGTH && cardWasntPlayed; ++i) {
           if (game.playerBlue.cards[i].priorityForAI == priority) {
             cardWasntPlayed = false;
             game.discardCard(i, game.playerBlue, game.playerRed);
@@ -39,7 +40,7 @@ export class AIService {
         }
       }
     }
-    return _.cloneDeep(game);
+    return game;
   }
 
   private play(game: GameDTO): GameDTO {
