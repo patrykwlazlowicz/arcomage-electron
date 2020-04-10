@@ -910,12 +910,13 @@
                         "operation": "GREATER_THAN"
                     }
                 },
+                "type": "CHANGE_VALUE",
                 "effectForOpponent": true,
-                "what": "castle",
-                "property": "tower",
-                "value": -6,
-                "specialEffect": null,
-                "specialEffectProperty": null
+                "effectProperty": {
+                    "what": "castle",
+                    "property": "tower",
+                    "value": -6
+                }
             },
             {
                 "condition": {
@@ -2454,7 +2455,7 @@
                 "effectProperty": {
                     "what": "castle",
                     "property": "wall",
-                    "value": 91
+                    "value": 1
                 }
             },
             {
@@ -3770,7 +3771,7 @@
                         "operation": "LESS_THAN"
                     }
                 },
-                "type": "CHANGE_VALUES",
+                "type": "CHANGE_VALUE",
                 "effectForOpponent": false,
                 "effectProperty": {
                     "what": "castle",
@@ -3789,7 +3790,7 @@
                         "operation": "GREATER_OR_EQUAL"
                     }
                 },
-                "type": "CHANGE_VALUES",
+                "type": "CHANGE_VALUE",
                 "effectForOpponent": false,
                 "effectProperty": {
                     "what": "castle",

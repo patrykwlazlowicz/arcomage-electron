@@ -44,9 +44,11 @@ export class Game implements GameDTO {
         // sprawdz game.state
         if (leader.isMyTurn) {
             const playedCard = leader.cards[cardIdx];
-            this.discardPlayedCard(playedCard);
-            this.givePlayerNextCard(cardIdx, leader);
-            this.swapTurnAfterDiscardCard(leader, opponent);
+            if (playedCard.canDiscard) {
+                this.discardPlayedCard(playedCard);
+                this.givePlayerNextCard(cardIdx, leader);
+                this.swapTurnAfterDiscardCard(leader, opponent);
+            }
         } else {
             throw Error("Engine failure");
         }
