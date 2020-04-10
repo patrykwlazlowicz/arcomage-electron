@@ -20,8 +20,8 @@ export class AIService {
 
   playPoorAI(gameDTO: GameDTO): GameDTO {
     const game: Game = <Game> gameDTO;
-    let cardWasntPlayed = true;
     while (game.playerBlue.isMyTurn) {
+      let cardWasntPlayed = true;
       for (let priority = 1; priority <= 4 && cardWasntPlayed; ++priority) {
         for (let i = 0; i < CARD_IDX.LENGTH && cardWasntPlayed; ++i) {
           if (game.canPlayThisCard(game.playerBlue.cards[i], game.playerBlue) && game.playerBlue.cards[i].priorityForAI == priority ) {

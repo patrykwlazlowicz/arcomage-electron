@@ -1,6 +1,6 @@
 <div class="row game-deck-card">
     <div class="col-12 align-self-center text-center">
-        <img (click)="playCard.emit(cardIdx)" src="{{GAME_IMAGES.ASSETS_PATH + imgName + '.jpg'}}" class="game-deck-card-image"
+        <img (mouseup)="playCard.emit({button: $event.button, cardIdx: cardIdx})" src="{{GAME_IMAGES.ASSETS_PATH + imgName + '.jpg'}}" class="game-deck-card-image"
             [ngClass]="{'game-deck-card-image-cant-afford': !canAfford}" />
     </div>
 </div>
