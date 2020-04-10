@@ -1,7 +1,7 @@
 import { WaistDTO } from '../dto/waist-dto';
 import { CardDTO } from '../dto/card-dto';
 import _ from 'lodash';
-import { CARD_IDX } from '../enum/card-idx.enum';
+import { CardIdx } from '../enum/card-idx.enum';
 
 import CARDS from '../../../assets/cards.json';
 
@@ -27,7 +27,7 @@ export class Waist implements WaistDTO {
             playerRed: [],
             playerBlue: []
         }
-        for (let i = 0; i < CARD_IDX.LENGTH; ++i) {
+        for (let i = 0; i < CardIdx.LENGTH; ++i) {
             dealedCards.playerRed.push(this.nextCard());
             dealedCards.playerBlue.push(this.nextCard());
         }

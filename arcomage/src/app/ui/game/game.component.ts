@@ -6,6 +6,8 @@ import { AIService } from 'src/app/engine/service/ai.service';
 import { GameDTO } from 'src/app/engine/dto/game-dto';
 import { CardClick } from '../interface/card-click';
 import { MouseButton } from '../enum/mouse-button.enum';
+import { UsedCardDTO } from 'src/app/engine/dto/used-card-dto';
+import { MessagesMap, GameMessage } from '../interface/game-messages';
 
 @Component({
   selector: 'app-game',
@@ -18,6 +20,7 @@ export class GameComponent implements OnInit {
   GAME_IMAGES: typeof GameImages = GameImages;
 
   game: GameDTO;
+  messages: GameMessage[];
 
   constructor(private tableService: TableService, private aiService: AIService) { }
 
@@ -26,14 +29,34 @@ export class GameComponent implements OnInit {
   }
 
   playCard(event: CardClick) {
+    const tempMsgs: GameMessage[] = [];
     if (event.button === MouseButton.LEFT) {
       this.game = this.tableService.playerPlayCard(event.cardIdx, this.game);
     } else {
       this.game = this.tableService.playerDiscardCard(event.cardIdx, this.game);
     }
+    tempMsgs.push(...this.createMessagesFromUsedCard(this.game.lastUsedCards));
+    if(this.game.playerRed.haveCardToDiscard) {
+      tempMsgs.push(<GameMessage> {
+        messageKey: MessagesMap.gameMsgPlayerRedHaveToDiscard
+      })
+    }
     if (!this.game.playerRed.isMyTurn) {
       this.game = this.aiService.playPoorAI(this.game);
+      tempMsgs.push(...this.createMessagesFromUsedCard(this.game.lastUsedCards));
     }
+    this.messages = tempMsgs;
+  }
+
+  private createMessagesFromUsedCard(lastUsedCards: UsedCardDTO[]): GameMessage[] {
+    const gameMesseges: GameMessage[] = [];
+    for (let usedCard of lastUsedCards) {
+      gameMesseges.push(<GameMessage> {
+        messageKey: MessagesMap.mapBySideAndAction(usedCard.usedBySide, usedCard.usedAction),
+        messageImageName: usedCard.card.name
+      })
+    }
+    return gameMesseges;
   }
 
 }

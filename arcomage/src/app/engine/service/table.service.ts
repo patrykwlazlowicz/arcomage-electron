@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PlayerDTO } from '../dto/player-dto';
 import { GameDTO } from '../dto/game-dto';
-import { CARD_IDX } from '../enum/card-idx.enum';
+import { CardIdx } from '../enum/card-idx.enum';
 import _ from 'lodash';
 import { Waist, DealCards } from '../model/waist';
 import { Game } from '../model/game';
@@ -48,19 +48,21 @@ export class TableService {
     return game;
   }
 
-  playerPlayCard(cardIdx: CARD_IDX, gameDTO: GameDTO): GameDTO {
-    const game: Game = <Game> gameDTO;
+  playerPlayCard(cardIdx: CardIdx, gameDTO: GameDTO): GameDTO {
+    const game: Game = _.cloneDeep(<Game> gameDTO);
+    game.lastUsedCards = [];
     game.playCard(cardIdx, game.playerRed, game.playerBlue);
     return _.cloneDeep(game);
   }
 
-  playerDiscardCard(cardIdx: CARD_IDX, gameDTO: GameDTO): GameDTO {
-    const game: Game = <Game> gameDTO;
+  playerDiscardCard(cardIdx: CardIdx, gameDTO: GameDTO): GameDTO {
+    const game: Game = _.cloneDeep(<Game> gameDTO);
+    game.lastUsedCards = [];
     game.discardCard(cardIdx, game.playerRed, game.playerBlue);
-    return _.cloneDeep(game);
+    return game;
   }
 
-  playerCanPlayThisCard(cardIdx: CARD_IDX, gameDTO: GameDTO): boolean {
+  playerCanPlayThisCard(cardIdx: CardIdx, gameDTO: GameDTO): boolean {
     const game: Game = <Game> gameDTO;
     return game.canPlayThisCard(game.playerRed.cards[cardIdx], game.playerRed);
   }
