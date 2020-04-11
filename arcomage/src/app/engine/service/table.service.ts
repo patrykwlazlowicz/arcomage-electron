@@ -64,6 +64,6 @@ export class TableService {
 
   playerCanPlayThisCard(cardIdx: CardIdx, gameDTO: GameDTO): boolean {
     const game: Game = <Game> gameDTO;
-    return game.canPlayThisCard(game.playerRed.cards[cardIdx], game.playerRed);
+    return game.canAffortForPlayThisCard(game.playerRed.cards[cardIdx], game.playerRed);
   }
 }

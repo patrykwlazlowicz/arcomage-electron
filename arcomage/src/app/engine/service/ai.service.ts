@@ -5,6 +5,7 @@ import { CardDTO } from '../dto/card-dto';
 import { PlayerDTO } from '../dto/player-dto';
 import { Game } from '../model/game';
 import _ from 'lodash';
+import { GameState } from '../enum/game-state.enum';
 
 interface CardPoints {
   idx: CardIdx;
@@ -21,11 +22,11 @@ export class AIService {
   playPoorAI(gameDTO: GameDTO): GameDTO {
     const game: Game = _.cloneDeep(<Game> gameDTO);
     game.lastUsedCards = [];
-    while (game.playerBlue.isMyTurn) {
+    while (game.playerBlue.isMyTurn && game.gameState == GameState.PLAY) {
       let cardWasntPlayed = true;
       for (let priority = 1; priority <= 4 && cardWasntPlayed; ++priority) {
         for (let i = 0; i < CardIdx.LENGTH && cardWasntPlayed; ++i) {
-          if (game.canPlayThisCard(game.playerBlue.cards[i], game.playerBlue) && game.playerBlue.cards[i].priorityForAI == priority ) {
+          if (game.canAffortForPlayThisCard(game.playerBlue.cards[i], game.playerBlue) && game.playerBlue.cards[i].priorityForAI == priority ) {
             cardWasntPlayed = false;
             game.playCard(i, game.playerBlue, game.playerRed);
           }

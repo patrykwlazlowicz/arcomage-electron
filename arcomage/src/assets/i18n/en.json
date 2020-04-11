@@ -7,5 +7,8 @@
     "game.msg.player.red.discard": "You discard this card",
     "game.msg.player.red.have.to.discard": "You must discard this card",
     "game.msg.player.blue.play": "Opponent play this card",
-    "game.msg.player.blue.discard": "Opponent discard a card"
+    "game.msg.player.blue.discard": "Opponent discard a card",
+    "game.msg.game.end.player.red.win": "You win",
+    "game.msg.game.end.player.blue.win": "You loose",
+    "game.msg.game.end.draw": "It's draw"
 }

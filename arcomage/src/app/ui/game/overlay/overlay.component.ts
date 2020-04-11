@@ -10,8 +10,8 @@ import { GameImages } from '../../enum/game-images.enum';
 })
 export class OverlayComponent implements OnInit {
 
-  SHOW_OVERLAY_DELAY:number = 0;
-  HIDE_OVERLAY_DELAY:number = 100;
+  SHOW_OVERLAY_DELAY:number = 10;
+  HIDE_OVERLAY_DELAY:number = 800;
   TRANSITION_PROPERY_NAME:string = 'visibility';
   GAME_IMAGES: typeof GameImages = GameImages;
 
@@ -27,7 +27,6 @@ export class OverlayComponent implements OnInit {
 
   @Input()
   set newMessages(newMessages: GameMessage[]) {
-    console.log(newMessages);
     this.messages = newMessages;
     if (!_.isEmpty(this.messages)) {
       this.showOverlayWithOldestMessage();
@@ -36,6 +35,8 @@ export class OverlayComponent implements OnInit {
 
   overlayClosed(event: TransitionEvent) {
     if (_.isEqual(event.propertyName, this.TRANSITION_PROPERY_NAME)) {
+      console.log('sss');
+      
       this.showOverlay = false;
       this.hideOverlay = false;
       if (!_.isEmpty(this.messages)) {

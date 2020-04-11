@@ -1293,13 +1293,11 @@
                     "type": "NO_CONDITION",
                     "conditionProperty": null
                 },
-                "type": "DAMAGE",
+                "type": "CHANGE_VALUE",
                 "effectForOpponent": false,
                 "effectProperty": {
                     "what": "castle",
-                    "property": "wall",
-                    "secondWaveDamageWhat": "castle",
-                    "secondWaveDamageProperty": "tower",
+                    "property": "tower",
                     "value": -3
                 }
             },

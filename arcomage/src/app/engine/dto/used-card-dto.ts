@@ -1,9 +1,9 @@
-import { UsedBySide } from '../enum/used-by-side.enum';
-import { UsedAction } from '../enum/used-action.enum';
+import { GameSide } from '../enum/game-side.enum';
+import { GameAction } from '../enum/game-action.enum';
 import { CardDTO } from './card-dto';
 
 export class UsedCardDTO {
-    usedBySide: UsedBySide;
-    usedAction: UsedAction;
+    usedBySide: GameSide;
+    usedAction: GameAction;
     card: CardDTO;
 }
