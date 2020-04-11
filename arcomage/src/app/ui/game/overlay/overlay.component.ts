@@ -35,8 +35,6 @@ export class OverlayComponent implements OnInit {
 
   overlayClosed(event: TransitionEvent) {
     if (_.isEqual(event.propertyName, this.TRANSITION_PROPERY_NAME)) {
-      console.log('sss');
-      
       this.showOverlay = false;
       this.hideOverlay = false;
       if (!_.isEmpty(this.messages)) {

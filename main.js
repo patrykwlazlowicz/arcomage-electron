@@ -1,9 +1,9 @@
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
 require('dotenv').config();
-if (process.env.PACKAGE === 'false'){
+if (process.env.PACKAGE === 'false') {
   require('electron-reload')(__dirname);
 }
 
@@ -12,20 +12,20 @@ let win = null;
 
 app.on('ready', function () {
 
-  win = new BrowserWindow({show: false});
-  
+  win = new BrowserWindow({ show: false });
+
   // Specify entry point
-  if (process.env.PACKAGE === 'true'){
+  if (process.env.PACKAGE === 'false') {
+    win.loadURL(process.env.HOST);
+    win.webContents.openDevTools();
+  } else {
     win.loadURL(url.format({
-      pathname: path.join(__dirname, 'arcomage/dist/arcomage/index.html'),
+      pathname: path.join(__dirname, '../frontend/index.html'),
       protocol: 'file:',
       slashes: true
     }));
-  } else {
-    win.loadURL(process.env.HOST);
-    win.webContents.openDevTools();
   }
-  
+
   win.maximize();
   win.show();
 

@@ -4,7 +4,10 @@
   "description": "Arcomage game",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build:linux": "electron-packager . Arcomage --ignore=arcomage --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=linux --arch=x64",
+    "build:win": "electron-packager . Arcomage --ignore=arcomage --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=win32 --arch=x64",
+    "build:mac": "electron-packager . Arcomage --ignore=arcomage --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=darwin --arch=x64"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   "homepage": "https://github.com/patrykwlazlowicz/arcomage-electron#readme",
   "devDependencies": {
     "electron": "^8.2.0",
+    "electron-packager": "^14.2.1",
     "electron-reload": "^1.5.0"
   },
   "dependencies": {
