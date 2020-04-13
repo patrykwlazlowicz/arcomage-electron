@@ -4,17 +4,17 @@
             <img src="{{imgName}}" class="game-resource-image"/>
         </div>
         <div class="col-6">
-            <game-resource-label [title]="'game.resources.growth'" [value]="growth">
+            <game-resource-label [title]="'game.resources.growth.' + resourceKind" [value]="growth">
             </game-resource-label>
-            <game-resource-label [title]="'game.resources.state'" [value]="state">
+            <game-resource-label [title]="'game.resources.state.' + resourceKind" [value]="state">
             </game-resource-label>
         </div>
     </div>
     <div class="row" *ngSwitchCase="RESOURCES_SIDE.RIGHT">
         <div class="col-6">
-            <game-resource-label [title]="'game.resources.growth'" [value]="growth">
+            <game-resource-label [title]="'game.resources.growth.' + resourceKind" [value]="growth">
             </game-resource-label>
-            <game-resource-label [title]="'game.resources.state'" [value]="state">
+            <game-resource-label [title]="'game.resources.state.' + resourceKind" [value]="state">
             </game-resource-label>
         </div>
         <div class="col-6 align-self-center">

@@ -11,7 +11,7 @@ import { GameImages } from '../../enum/game-images.enum';
 export class OverlayComponent implements OnInit {
 
   SHOW_OVERLAY_DELAY:number = 10;
-  HIDE_OVERLAY_DELAY:number = 800;
+  HIDE_OVERLAY_DELAY:number = 1000;
   TRANSITION_PROPERY_NAME:string = 'visibility';
   GAME_IMAGES: typeof GameImages = GameImages;
 
@@ -35,8 +35,6 @@ export class OverlayComponent implements OnInit {
 
   overlayClosed(event: TransitionEvent) {
     if (_.isEqual(event.propertyName, this.TRANSITION_PROPERY_NAME)) {
-      console.log('sss');
-      
       this.showOverlay = false;
       this.hideOverlay = false;
       if (!_.isEmpty(this.messages)) {
