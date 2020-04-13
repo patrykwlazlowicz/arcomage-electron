@@ -11,6 +11,7 @@ import { MessagesMap, GameMessage } from '../interface/game-messages';
 import { GameSide } from 'src/app/engine/enum/game-side.enum';
 import { GameAction } from 'src/app/engine/enum/game-action.enum';
 import { GameState } from 'src/app/engine/enum/game-state.enum';
+import { ResourceTitle } from '../enum/resource-title.enum';
 
 @Component({
   selector: 'app-game',
@@ -19,6 +20,7 @@ import { GameState } from 'src/app/engine/enum/game-state.enum';
 })
 export class GameComponent implements OnInit {
 
+  RESOURCES_GROWTH_TITLE: typeof ResourceTitle = ResourceTitle;
   RESOURCES_SIDE: typeof ResourcesSide = ResourcesSide;
   GAME_IMAGES: typeof GameImages = GameImages;
 

@@ -11,6 +11,7 @@ export class ResourceComponent implements OnInit {
   RESOURCES_SIDE: typeof ResourcesSide = ResourcesSide;
 
   @Input() imgName: string;
+  @Input() resourceKind: string;
   @Input() growth: string;
   @Input() state: string;
   @Input() sideAdjustment: ResourcesSide;

@@ -1,6 +1,10 @@
 {
-    "game.resources.state": "State",
-    "game.resources.growth": "Growth",
+    "game.resources.state.bricks": "Bricks",
+    "game.resources.growth.bricks": "Quarry",
+    "game.resources.state.gems": "Gems",
+    "game.resources.growth.gems": "Magic",
+    "game.resources.state.recruits": "Recruits",
+    "game.resources.growth.recruits": "Dungeon",
     "game.castle.tower": "Tower",
     "game.castle.wall": "Wall",
     "game.msg.player.red.play": "You play this card",

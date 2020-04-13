@@ -11,7 +11,7 @@ import { GameImages } from '../../enum/game-images.enum';
 export class OverlayComponent implements OnInit {
 
   SHOW_OVERLAY_DELAY:number = 10;
-  HIDE_OVERLAY_DELAY:number = 800;
+  HIDE_OVERLAY_DELAY:number = 1000;
   TRANSITION_PROPERY_NAME:string = 'visibility';
   GAME_IMAGES: typeof GameImages = GameImages;
 

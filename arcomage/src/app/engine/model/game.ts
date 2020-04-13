@@ -9,6 +9,8 @@ import { UsedCardDTO } from '../dto/used-card-dto';
 import { GameAction } from '../enum/game-action.enum';
 import { GameSide } from '../enum/game-side.enum';
 import { GameState } from '../enum/game-state.enum';
+import { ConditionChecker } from './condition-checker';
+import { SideEffectDTO } from '../dto/side-effect-dto';
 
 export class Game implements GameDTO {
     waist: Waist;
@@ -20,6 +22,7 @@ export class Game implements GameDTO {
     whoWin: GameSide = null;
 
     private sideEffectExecutor: SideEffectExecutor = new SideEffectExecutor();
+    private conditionChecker: ConditionChecker = new ConditionChecker();
 
     constructor(waist: Waist, playerRed: PlayerDTO, playerBlue: PlayerDTO, towerHeightForWin: number) {
         this.waist = waist;
@@ -100,7 +103,13 @@ export class Game implements GameDTO {
     }
 
     private executeCardSideEffects(playedCard: CardDTO, leader: PlayerDTO, opponent: PlayerDTO) {
+        const sideEffectsToExecute: SideEffectDTO[] = [];
         for (let sideEffect of playedCard.sideEffects) {
+            if (this.conditionChecker.checkCondition(leader, opponent, sideEffect.condition)) {
+                sideEffectsToExecute.push(sideEffect);
+            }
+        }
+        for (let sideEffect of sideEffectsToExecute) {
             this.sideEffectExecutor.executeEffect(sideEffect, leader, opponent);
         }
     }
