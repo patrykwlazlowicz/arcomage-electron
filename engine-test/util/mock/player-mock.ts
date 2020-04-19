@@ -24,4 +24,35 @@ export class PlayerMock {
       cards: []
     };
   }
+  static ExampleState = 30
+  static ExampleGrowth = 1
+  static ExampleWall = 10
+  static ExamplePlayerRed(): PlayerDTO {
+    return <PlayerDTO>{
+      bricks: {
+        state: PlayerMock.ExampleState,
+        growth: PlayerMock.ExampleGrowth
+      },
+      gems: {
+        state: PlayerMock.ExampleState,
+        growth: PlayerMock.ExampleGrowth
+      },
+      recruits: {
+        state: PlayerMock.ExampleState,
+        growth: PlayerMock.ExampleGrowth
+      },
+      castle: {
+        tower: PlayerMock.ExampleState,
+        wall: PlayerMock.ExampleWall
+      },
+      isMyTurn: true,
+      haveCardToDiscard: 0,
+      cards: []
+    };
+  }
+  static ExamplePlayerBlue(): PlayerDTO {
+    const player = PlayerMock.ExamplePlayerRed();
+    player.isMyTurn = false;
+    return player;
+  }
 }
