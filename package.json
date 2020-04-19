@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "mocha --files true -r ts-node/register engine-test/waist-test.ts",
+    "test": "mocha --files true -r ts-node/register engine-test/*test.ts",
     "build:linux": "electron-packager . Arcomage --ignore=arcomage --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=linux --arch=x64",
     "build:win": "electron-packager . Arcomage --ignore=arcomage --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=win32 --arch=x64",
     "build:mac": "electron-packager . Arcomage --ignore=arcomage --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=darwin --arch=x64"
