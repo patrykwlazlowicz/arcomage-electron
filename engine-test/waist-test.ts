@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import { Waist, DealCards } from '../arcomage/src/app/engine/model/waist'
 import { WaistChecker } from './util/waist-checker';
-import _ from 'lodash';
 import { CardDTO } from '../arcomage/src/app/engine/dto/card-dto';
 
 describe('Waist', function () {
@@ -46,26 +45,19 @@ describe('Waist', function () {
 
         describe('should properly give next card', function () {
             const waist = new Waist();
-            for (let i: number = 0; i < 2; ++i) {
-                expect(waist).to.have.property('waist').with.lengthOf(WaistChecker.WaistSize - i);
-                expect(waist).to.have.property('discardedWaist').with.lengthOf(i);
-                console.log("waist " + waist.waist.length);
-                console.log("discardedWaist " + waist.discardedWaist.length);
-                const nextCard: CardDTO = waist.nextCard();
-                console.log("next Card");
-                expect(waist).to.have.property('waist').with.lengthOf(WaistChecker.WaistSize - 1 - i);
-                expect(waist).to.have.property('discardedWaist').with.lengthOf(i);
-                console.log("waist " + waist.waist.length);
-                console.log("discardedWaist " + waist.discardedWaist.length);
+            for (let i = 0; i < WaistChecker.WaistSize * 3; ++i) {
                 it((i + 1) + ' card giving', function () {
-                    console.log(waist.waist.length);
-                    console.log(waist.discardedWaist.length);
-                    console.log(waist.waist.length + waist.discardedWaist.length + [nextCard].length + [].length);
+                    const nextCard: CardDTO = waist.nextCard();
                     WaistChecker.ProperAmountOfCard(waist, [nextCard], []);
                     WaistChecker.CardsAreUnique(waist, [nextCard]);
                     expect(waist).to.have.property('waist').with.lengthOf(WaistChecker.WaistSize - (i % WaistChecker.WaistSize + 1));
+                    expect(waist).to.have.property('discardedWaist').with.lengthOf(i % WaistChecker.WaistSize);
+                    waist.discardedWaist.push(nextCard);
+                    WaistChecker.ProperAmountOfCard(waist, [], []);
+                    WaistChecker.CardsAreUnique(waist);
+                    expect(waist).to.have.property('waist').with.lengthOf(WaistChecker.WaistSize - (i % WaistChecker.WaistSize + 1));
+                    expect(waist).to.have.property('discardedWaist').with.lengthOf(i % WaistChecker.WaistSize + 1);
                 });
-                waist.discardedWaist.push(nextCard);
             }
         });
     });
