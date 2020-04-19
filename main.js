@@ -3,7 +3,7 @@ const path = require('path');
 const url = require('url');
 
 require('dotenv').config();
-if (process.env.PACKAGE === 'false') {
+if (process.env.ENABLE_RELOAD === 'true') {
   require('electron-reload')(__dirname);
 }
 
