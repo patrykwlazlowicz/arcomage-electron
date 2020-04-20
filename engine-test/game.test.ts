@@ -92,6 +92,12 @@ describe('Game', function () {
             card = _.find(CARDS, { 'name': cardName});
             playerRed.cards[CardIdx.ONE] = card;
         }
+        function cardTestCase(cardName: string, testSuite: () => void, alternativeDescription?: string) {
+            it(alternativeDescription ? alternativeDescription : 'test ' + cardName + ' card', function () {
+                setTestedCard(cardName);
+                testSuite();
+            });
+        }
         this.beforeEach(function() {
             playerRed = PlayerMock.ExamplePlayerRed();
             playerBlue = PlayerMock.ExamplePlayerBlue();
@@ -99,9 +105,8 @@ describe('Game', function () {
             game.lastUsedCards = [];
             card = null;
         })
-        it('test r1 card', function () {
-            setTestedCard('r1');
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+        cardTestCase('r1', function () {
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -123,10 +128,9 @@ describe('Game', function () {
             expect(playerBlue.isMyTurn).to.be.true;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
-        it('test r2 card', function () {
-            setTestedCard('r2');
+        cardTestCase('r2', function () {
             playerBlue.castle.wall = 1
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -148,10 +152,9 @@ describe('Game', function () {
             expect(playerBlue.isMyTurn).to.be.false;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
-        it('test r3 card', function () {
-            setTestedCard('r3');
+        cardTestCase('r3', function () {
             playerBlue.castle.wall = 1
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState - 3);
@@ -173,9 +176,8 @@ describe('Game', function () {
             expect(playerBlue.isMyTurn).to.be.true;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
-        it('test r4 card', function () {
-            setTestedCard('r4');
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+        cardTestCase('r4', function () {
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -197,9 +199,8 @@ describe('Game', function () {
             expect(playerBlue.isMyTurn).to.be.true;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
-        it('test r5 card', function () {
-            setTestedCard('r5');
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+        cardTestCase('r5', function () {
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -221,11 +222,10 @@ describe('Game', function () {
             expect(playerBlue.isMyTurn).to.be.false;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
-        it('test r6 card', function () {
-            setTestedCard('r6');
+        cardTestCase('r6', function () {
             playerRed.castle.wall = 2;
             playerBlue.castle.wall = 2;
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -247,9 +247,8 @@ describe('Game', function () {
             expect(playerBlue.isMyTurn).to.be.true;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
-        it('test r7 card', function () {
-            setTestedCard('r7');
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+        cardTestCase('r7', function () {
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -271,10 +270,9 @@ describe('Game', function () {
             expect(playerBlue.isMyTurn).to.be.true;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
-        it('test r7 card for playerRed who have no wall', function () {
-            setTestedCard('r7');
+        cardTestCase('r7', function () {
             playerRed.castle.wall = 0;
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -295,10 +293,9 @@ describe('Game', function () {
             expect(playerBlue.castle.wall).to.be.equal(PlayerMock.ExampleWall);
             expect(playerBlue.isMyTurn).to.be.true;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
-        });
-        it('test r8 card', function () {
-            setTestedCard('r8');
-            game['playCard'](CardIdx.ONE, playerRed, playerBlue);
+        }, 'test r7 card for playerRed who have no wall');
+        cardTestCase('r8', function () {
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
             expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
             expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
             expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
@@ -318,6 +315,124 @@ describe('Game', function () {
             expect(playerBlue.castle.tower).to.be.equal(PlayerMock.ExampleState - 2);
             expect(playerBlue.castle.wall).to.be.equal(PlayerMock.ExampleWall);
             expect(playerBlue.isMyTurn).to.be.false;
+            expect(playerBlue.haveCardToDiscard).to.be.equal(0);
+        });
+        cardTestCase('r9', function () {
+            playerBlue.castle.wall = 2;
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
+            expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.recruits.state).to.be.equal(PlayerMock.ExampleState - 3);
+            expect(playerRed.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.castle.tower).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.castle.wall).to.be.equal(PlayerMock.ExampleWall);
+            expect(playerRed.isMyTurn).to.be.false;
+            expect(playerRed.haveCardToDiscard).to.be.equal(0);
+            expect(playerBlue.bricks.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.castle.tower).to.be.equal(PlayerMock.ExampleState - 3);
+            expect(playerBlue.castle.wall).to.be.equal(0);
+            expect(playerBlue.isMyTurn).to.be.true;
+            expect(playerBlue.haveCardToDiscard).to.be.equal(0);
+        });
+        cardTestCase('r10', function () {
+            playerBlue.castle.wall = 2;
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
+            expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.recruits.state).to.be.equal(PlayerMock.ExampleState - 5);
+            expect(playerRed.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.castle.tower).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.castle.wall).to.be.equal(PlayerMock.ExampleWall + 3);
+            expect(playerRed.isMyTurn).to.be.false;
+            expect(playerRed.haveCardToDiscard).to.be.equal(0);
+            expect(playerBlue.bricks.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.castle.tower).to.be.equal(PlayerMock.ExampleState - 2);
+            expect(playerBlue.castle.wall).to.be.equal(0);
+            expect(playerBlue.isMyTurn).to.be.true;
+            expect(playerBlue.haveCardToDiscard).to.be.equal(0);
+        });
+        cardTestCase('r11', function () {
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
+            expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.recruits.state).to.be.equal(PlayerMock.ExampleState - 6);
+            expect(playerRed.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.castle.tower).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.castle.wall).to.be.equal(PlayerMock.ExampleWall);
+            expect(playerRed.isMyTurn).to.be.false;
+            expect(playerRed.haveCardToDiscard).to.be.equal(0);
+            expect(playerBlue.bricks.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.castle.tower).to.be.equal(PlayerMock.ExampleState - 4);
+            expect(playerBlue.castle.wall).to.be.equal(PlayerMock.ExampleWall);
+            expect(playerBlue.isMyTurn).to.be.true;
+            expect(playerBlue.haveCardToDiscard).to.be.equal(0);
+        });
+        cardTestCase('r12', function () {
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
+            expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.recruits.state).to.be.equal(PlayerMock.ExampleState - 7);
+            expect(playerRed.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth + 2);
+            expect(playerRed.castle.tower).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.castle.wall).to.be.equal(PlayerMock.ExampleWall);
+            expect(playerRed.isMyTurn).to.be.false;
+            expect(playerRed.haveCardToDiscard).to.be.equal(0);
+            expect(playerBlue.bricks.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.castle.tower).to.be.equal(PlayerMock.ExampleState);
+            expect(playerBlue.castle.wall).to.be.equal(PlayerMock.ExampleWall);
+            expect(playerBlue.isMyTurn).to.be.true;
+            expect(playerBlue.haveCardToDiscard).to.be.equal(0);
+        });
+        cardTestCase('r13', function () {
+            playerBlue.castle.wall = 1;
+            game.playCard(CardIdx.ONE, playerRed, playerBlue);
+            expect(playerRed.bricks.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.gems.state).to.be.equal(PlayerMock.ExampleState);
+            expect(playerRed.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.recruits.state).to.be.equal(PlayerMock.ExampleState - 8);
+            expect(playerRed.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerRed.castle.tower).to.be.equal(PlayerMock.ExampleState + 2);
+            expect(playerRed.castle.wall).to.be.equal(PlayerMock.ExampleWall + 4);
+            expect(playerRed.isMyTurn).to.be.false;
+            expect(playerRed.haveCardToDiscard).to.be.equal(0);
+            expect(playerBlue.bricks.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.bricks.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.gems.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.state).to.be.equal(PlayerMock.ExampleState + PlayerMock.ExampleGrowth);
+            expect(playerBlue.recruits.growth).to.be.equal(PlayerMock.ExampleGrowth);
+            expect(playerBlue.castle.tower).to.be.equal(PlayerMock.ExampleState - 1);
+            expect(playerBlue.castle.wall).to.be.equal(0);
+            expect(playerBlue.isMyTurn).to.be.true;
             expect(playerBlue.haveCardToDiscard).to.be.equal(0);
         });
     });
