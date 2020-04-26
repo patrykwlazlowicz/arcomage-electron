@@ -7,10 +7,11 @@ import { GameDTO } from '../../engine/dto/game-dto';
 import { CardClick } from '../interface/card-click';
 import { MouseButton } from '../enum/mouse-button.enum';
 import { UsedCardDTO } from '../../engine/dto/used-card-dto';
-import { MessagesMap, GameMessage } from '../interface/game-messages';
+import { GameMessage } from '../interface/game-messages';
 import { GameSide } from '../../engine/enum/game-side.enum';
 import { GameAction } from '../../engine/enum/game-action.enum';
 import { GameState } from '../../engine/enum/game-state.enum';
+import { MessagesMap } from '../../shared/util/messages-map';
 
 @Component({
   selector: 'app-game',

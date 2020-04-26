@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessagesMap } from '../interface/game-messages';
-import { Router } from '@angular/router';
+import { MessagesMap } from '../../shared/util/messages-map';
 
 @Component({
   selector: 'app-menu',

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ResourcesSide } from '../../enum/resources-side.enum';
-import { MessagesMap } from '../../interface/game-messages';
+import { MessagesMap } from '../../../shared/util/messages-map';
 
 @Component({
   selector: 'game-resource',
