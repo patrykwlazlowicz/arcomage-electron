@@ -1653,8 +1653,8 @@
                 "effectForOpponent": false,
                 "effectProperty": {
                     "what": "bricks",
-                    "property": "state",
-                    "value": 2
+                    "property": "growth",
+                    "value": 1
                 }
             }
         ]
