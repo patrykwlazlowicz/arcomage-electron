@@ -2,38 +2,38 @@
 
 <div class="row game-resource-container">
     <div class="col-2">
-        <game-resource [imgName]="GAME_IMAGES.BRICKS" [resourceKind]="RESOURCES_GROWTH_TITLE.BRICKS" [growth]="game.playerRed.bricks.growth"
+        <game-resource [imgName]="GAME_IMAGES.BRICKS" [resourceKind]="MESSAGES_MAP.gameResourcesKindBricks" [growth]="game.playerRed.bricks.growth"
             [state]="game.playerRed.bricks.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.GEMS" [resourceKind]="RESOURCES_GROWTH_TITLE.GEMS" [growth]="game.playerRed.gems.growth"
+        <game-resource [imgName]="GAME_IMAGES.GEMS" [resourceKind]="MESSAGES_MAP.gameResourcesKindGems" [growth]="game.playerRed.gems.growth"
             [state]="game.playerRed.gems.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [resourceKind]="RESOURCES_GROWTH_TITLE.RECRUITS" [growth]="game.playerRed.recruits.growth"
+        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [resourceKind]="MESSAGES_MAP.gameResourcesKindRecruits" [growth]="game.playerRed.recruits.growth"
             [state]="game.playerRed.recruits.state" [sideAdjustment]="RESOURCES_SIDE.LEFT"></game-resource>
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.TOWER_RED" [elementTitle]="'game.castle.tower'"
+        <game-castle [imgName]="GAME_IMAGES.TOWER_RED" [elementTitle]="MESSAGES_MAP.gameCastleTower"
             [state]="game.playerRed.castle.tower"></game-castle>
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="'game.castle.wall'"
+        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="MESSAGES_MAP.gameCastleWall"
             [state]="game.playerRed.castle.wall"></game-castle>
     </div>
     <div class="col-4">
         <!-- SEPARATOR -->
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="'game.castle.wall'"
+        <game-castle [imgName]="GAME_IMAGES.WALL" [elementTitle]="MESSAGES_MAP.gameCastleWall"
             [state]="game.playerBlue.castle.wall"></game-castle>
     </div>
     <div class="col-1">
-        <game-castle [imgName]="GAME_IMAGES.TOWER_BLUE" [elementTitle]="'game.castle.tower'"
+        <game-castle [imgName]="GAME_IMAGES.TOWER_BLUE" [elementTitle]="MESSAGES_MAP.gameCastleTower"
             [state]="game.playerBlue.castle.tower"></game-castle>
     </div>
     <div class="col-2">
-        <game-resource [imgName]="GAME_IMAGES.BRICKS" [resourceKind]="RESOURCES_GROWTH_TITLE.BRICKS" [growth]="game.playerBlue.bricks.growth"
+        <game-resource [imgName]="GAME_IMAGES.BRICKS" [resourceKind]="MESSAGES_MAP.gameResourcesKindBricks" [growth]="game.playerBlue.bricks.growth"
             [state]="game.playerBlue.bricks.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.GEMS" [resourceKind]="RESOURCES_GROWTH_TITLE.GEMS" [growth]="game.playerBlue.gems.growth"
+        <game-resource [imgName]="GAME_IMAGES.GEMS" [resourceKind]="MESSAGES_MAP.gameResourcesKindGems" [growth]="game.playerBlue.gems.growth"
             [state]="game.playerBlue.gems.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
-        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [resourceKind]="RESOURCES_GROWTH_TITLE.RECRUITS" [growth]="game.playerBlue.recruits.growth"
+        <game-resource [imgName]="GAME_IMAGES.RECRUITS" [resourceKind]="MESSAGES_MAP.gameResourcesKindRecruits" [growth]="game.playerBlue.recruits.growth"
             [state]="game.playerBlue.recruits.state" [sideAdjustment]="RESOURCES_SIDE.RIGHT"></game-resource>
     </div>
 </div>

@@ -14,7 +14,7 @@ export class Damage implements SideEffect {
 
     static TYPE: string = "DAMAGE";
 
-    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty) {
+    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty): void {
         subject[sideEffectProperty.what][sideEffectProperty.property] += sideEffectProperty.value;
         if (subject[sideEffectProperty.what][sideEffectProperty.property] < 0) {
             const secondWave: number = subject[sideEffectProperty.what][sideEffectProperty.property];

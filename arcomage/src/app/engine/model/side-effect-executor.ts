@@ -21,7 +21,7 @@ export class SideEffectExecutor {
     this.sideEffectsRegister.set(DiscardCard.TYPE, new DiscardCard());
   }
 
-  executeEffect(sideEffectDTO: SideEffectDTO, leader: PlayerDTO, opponent: PlayerDTO) {
+  executeEffect(sideEffectDTO: SideEffectDTO, leader: PlayerDTO, opponent: PlayerDTO): void {
     const subject: PlayerDTO = (sideEffectDTO.effectForOpponent ? opponent : leader);
     const opponentForSubject: PlayerDTO = (sideEffectDTO.effectForOpponent ? leader : opponent);
     this.sideEffectsRegister.get(sideEffectDTO.type).execute(subject, opponentForSubject, sideEffectDTO.effectProperty);

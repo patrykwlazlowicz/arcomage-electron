@@ -33,7 +33,7 @@ export class OverlayComponent implements OnInit {
     }
   }
 
-  overlayClosed(event: TransitionEvent) {
+  overlayClosed(event: TransitionEvent): void {
     if (_.isEqual(event.propertyName, this.TRANSITION_PROPERY_NAME)) {
       this.showOverlay = false;
       this.hideOverlay = false;
@@ -45,7 +45,7 @@ export class OverlayComponent implements OnInit {
     }
   }
 
-  private showOverlayWithOldestMessage() {
+  private showOverlayWithOldestMessage(): void {
     this.currentMessage = _.head(this.messages);
     this.messages = _.tail(this.messages);
     setTimeout(() => this.showOverlay = true, this.SHOW_OVERLAY_DELAY);
