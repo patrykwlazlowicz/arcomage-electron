@@ -1068,7 +1068,7 @@
                 "effectProperty": {
                     "what": "bricks",
                     "property": "state",
-                    "value": -10
+                    "value": -5
                 }
             },
             {
@@ -1079,9 +1079,9 @@
                 "type": "CHANGE_VALUE",
                 "effectForOpponent": true,
                 "effectProperty": {
-                    "what": "bricks",
+                    "what": "gems",
                     "property": "state",
-                    "value": -5
+                    "value": -10
                 }
             }
         ]
@@ -1207,7 +1207,7 @@
                 "effectForOpponent": true,
                 "effectProperty": {
                     "what": "castle",
-                    "property": "tower",
+                    "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
                     "value": -3
@@ -1408,7 +1408,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -13
+                    "value": -20
                 }
             },
             {
