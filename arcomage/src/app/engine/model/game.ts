@@ -31,7 +31,7 @@ export class Game implements GameDTO {
         this.towerHeightForWin = towerHeightForWin;
     }
 
-    playCard(cardIdx: CardIdx, leader: PlayerDTO, opponent: PlayerDTO) {
+    playCard(cardIdx: CardIdx, leader: PlayerDTO, opponent: PlayerDTO): void {
         if (this.canUseCard(leader)) {
             const playedCard = leader.cards[cardIdx];
             if (this.canPlayCard(playedCard, leader)) {
@@ -48,7 +48,7 @@ export class Game implements GameDTO {
         }
     }
 
-    discardCard(cardIdx: CardIdx, leader: PlayerDTO, opponent: PlayerDTO) {
+    discardCard(cardIdx: CardIdx, leader: PlayerDTO, opponent: PlayerDTO): void {
         if (this.canUseCard(leader)) {
             const playedCard = leader.cards[cardIdx];
             if (playedCard.canDiscard) {
@@ -87,22 +87,22 @@ export class Game implements GameDTO {
         return !leader.haveCardToDiscard && this.canAffortForPlayThisCard(playedCard, leader);
     }
 
-    private subtractPrice(card: CardDTO, leader: PlayerDTO) {
+    private subtractPrice(card: CardDTO, leader: PlayerDTO): void {
         leader.bricks.state -= card.price.bricks;
         leader.gems.state -= card.price.gems;
         leader.recruits.state -= card.price.recruits;
     }
 
-    private discardPlayedCard(card: CardDTO) {
+    private discardPlayedCard(card: CardDTO): void {
         this.waist.discardedWaist.push(card);
     }
 
-    private givePlayerNextCard(cardIdx: CardIdx, leader: PlayerDTO) {
+    private givePlayerNextCard(cardIdx: CardIdx, leader: PlayerDTO): void {
         const nextCard: CardDTO = this.waist.nextCard();
         leader.cards[cardIdx] = nextCard;
     }
 
-    private executeCardSideEffects(playedCard: CardDTO, leader: PlayerDTO, opponent: PlayerDTO) {
+    private executeCardSideEffects(playedCard: CardDTO, leader: PlayerDTO, opponent: PlayerDTO): void {
         const sideEffectsToExecute: SideEffectDTO[] = [];
         for (let sideEffect of playedCard.sideEffects) {
             if (this.conditionChecker.checkCondition(leader, opponent, sideEffect.condition)) {
@@ -114,7 +114,7 @@ export class Game implements GameDTO {
         }
     }
 
-    private changeGameStateIfWin() {
+    private changeGameStateIfWin(): void {
         if (this.playerRed.castle.tower >= this.towerHeightForWin) {
             this.gameState = GameState.END;
             if (this.playerBlue.castle.tower < this.towerHeightForWin) {
@@ -138,13 +138,13 @@ export class Game implements GameDTO {
         }
     }
 
-    private swapTurnAfterPlayCard(card: CardDTO, leader: PlayerDTO, opponent: PlayerDTO) {
+    private swapTurnAfterPlayCard(card: CardDTO, leader: PlayerDTO, opponent: PlayerDTO): void {
         if (!card.playAgain && !leader.haveCardToDiscard) {
             this.swapTurn(leader, opponent);
         }
     }
 
-    private swapTurnAfterDiscardCard(leader: PlayerDTO, opponent: PlayerDTO) {
+    private swapTurnAfterDiscardCard(leader: PlayerDTO, opponent: PlayerDTO): void {
         if (leader.haveCardToDiscard) {
             --leader.haveCardToDiscard;
         } else {
@@ -152,19 +152,19 @@ export class Game implements GameDTO {
         }
     }
 
-    private swapTurn(leader: PlayerDTO, opponent: PlayerDTO) {
+    private swapTurn(leader: PlayerDTO, opponent: PlayerDTO): void {
         leader.isMyTurn = false;
         opponent.isMyTurn = true;
         this.increaseResources(opponent);
     }
 
-    private increaseResources(opponent: PlayerDTO) {
+    private increaseResources(opponent: PlayerDTO): void {
         opponent.bricks.state += opponent.bricks.growth;
         opponent.gems.state += opponent.gems.growth;
         opponent.recruits.state += opponent.recruits.growth;
     }
 
-    private addLastPlayedCard(card: CardDTO, leader: PlayerDTO, usedAction: GameAction) {
+    private addLastPlayedCard(card: CardDTO, leader: PlayerDTO, usedAction: GameAction): void {
         this.lastUsedCards.push(<UsedCardDTO>{
             usedBySide: (_.isEqual(this.playerRed, leader) ? GameSide.PLAYER_RED : GameSide.PLAYER_BLUE),
             usedAction,

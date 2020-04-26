@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameModule } from './ui/game/game.module';
 import { createTranslateLoader } from './shared/lib/translate-file-loader';
+import { MenuModule } from './ui/menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { createTranslateLoader } from './shared/lib/translate-file-loader';
       useDefaultLang: true,
       defaultLanguage: 'en'
     }),
-    GameModule
+    GameModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

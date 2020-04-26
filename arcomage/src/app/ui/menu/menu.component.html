@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 text-center game-menu-container">
+        <button class="btn btn-primary btn-block font-weight-bold game-menu-button" routerLink="/howtoplay">
+            {{MESSAGES_MAP.gameMenuHowToPlay | translate | uppercase}}
+        </button>
+        <button class="btn btn-primary btn-block font-weight-bold game-menu-button" routerLink="/game/init">
+            {{MESSAGES_MAP.gameMenuNewGame | translate | uppercase}}
+        </button>
+        <button class="btn btn-primary btn-block font-weight-bold game-menu-button" (click)="exit()">
+            {{MESSAGES_MAP.gameMenuExit | translate | uppercase}}
+        </button>
+    </div>
+    <div class="col-4"></div>
+</div>

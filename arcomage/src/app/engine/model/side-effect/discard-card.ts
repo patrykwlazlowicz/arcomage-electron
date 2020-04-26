@@ -6,7 +6,7 @@ export class DiscardCard implements SideEffect {
 
     static TYPE: string = "DISCARD_CARD";
 
-    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: any) {
+    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: any): void {
         ++subject.haveCardToDiscard;
     }
 

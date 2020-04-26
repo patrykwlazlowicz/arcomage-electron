@@ -11,7 +11,7 @@ export class AlignResources implements SideEffect {
 
     static TYPE: string = "ALIGN_RESOURCES";
 
-    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty) {
+    execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty): void {
         subject[sideEffectProperty.what][sideEffectProperty.property] = opponentForSubject[sideEffectProperty.what][sideEffectProperty.property];
     }
 

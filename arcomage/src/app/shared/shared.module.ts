@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { createTranslateLoader } from './lib/translate-file-loader';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -11,6 +11,7 @@ import { createTranslateLoader } from './lib/translate-file-loader';
   ],
   exports: [
     CommonModule,
+    RouterModule,
     NgbModule,
     TranslateModule
   ]

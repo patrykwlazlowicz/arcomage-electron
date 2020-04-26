@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { GameDTO } from 'src/app/engine/dto/game-dto';
-import { TableService } from 'src/app/engine/service/table.service';
+import { GameDTO } from '../../../engine/dto/game-dto';
+import { TableService } from '../../../engine/service/table.service';
 import { CardClick } from '../../interface/card-click';
 
 @Component({
