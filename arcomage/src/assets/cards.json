@@ -2078,7 +2078,7 @@
                         "conditionForOpponent": false,
                         "what": "castle",
                         "property": "wall",
-                        "operation": "EQUAL",
+                        "operation": "NOT_EQUAL",
                         "value": 0
                     }
                 },
@@ -2255,7 +2255,7 @@
                 "effectForOpponent": false,
                 "effectProperty": {
                     "what": "castle",
-                    "property": "wall",
+                    "property": "tower",
                     "value": 3
                 }
             }
@@ -2320,7 +2320,7 @@
                 "effectForOpponent": false,
                 "effectProperty": {
                     "what": "castle",
-                    "property": "wall",
+                    "property": "tower",
                     "value": 5
                 }
             }
