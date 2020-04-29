@@ -2596,11 +2596,11 @@
                     }
                 },
                 "type": "CHANGE_VALUE",
-                "effectForOpponent": true,
+                "effectForOpponent": false,
                 "effectProperty": {
-                    "what": "castle",
-                    "property": "wall",
-                    "value": 6
+                    "what": "recruits",
+                    "property": "growth",
+                    "value": 1
                 }
             },
             {
@@ -2609,7 +2609,7 @@
                     "conditionProperty": null
                 },
                 "type": "CHANGE_VALUE",
-                "effectForOpponent": true,
+                "effectForOpponent": false,
                 "effectProperty": {
                     "what": "recruits",
                     "property": "state",
@@ -2622,11 +2622,11 @@
                     "conditionProperty": null
                 },
                 "type": "CHANGE_VALUE",
-                "effectForOpponent": true,
+                "effectForOpponent": false,
                 "effectProperty": {
-                    "what": "recruits",
-                    "property": "growth",
-                    "value": 1
+                    "what": "castle",
+                    "property": "wall",
+                    "value": 6
                 }
             }
         ]
@@ -2767,7 +2767,7 @@
         "priorityForAI": 1,
         "price": {
             "bricks": 0,
-            "gems": 1,
+            "gems": 2,
             "recruits": 0
         },
         "playAgain": true,
@@ -2917,13 +2917,11 @@
                     "type": "NO_CONDITION",
                     "conditionProperty": null
                 },
-                "type": "DAMAGE",
+                "type": "CHANGE_VALUE",
                 "effectForOpponent": true,
                 "effectProperty": {
                     "what": "castle",
-                    "property": "wall",
-                    "secondWaveDamageWhat": "castle",
-                    "secondWaveDamageProperty": "tower",
+                    "property": "tower",
                     "value": -2
                 }
             }
