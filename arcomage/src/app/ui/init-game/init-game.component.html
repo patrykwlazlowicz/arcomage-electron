@@ -18,13 +18,13 @@
         </init-game-resource-slider>
         <div class="row">
             <div class="col-6 text-center">
-                <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border init-game-button"
+                <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border"
                     routerLink="{{BACK_PATH}}">
                     {{MESSAGES_MAP.gameInitBack | translate | uppercase}}
                 </button>
             </div>
             <div class="col-6 text-center game-menu-container">
-                <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border init-game-button"
+                <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border"
                     routerLink="{{START_PATH_PREFFIX + resourceStateValue + '/' + resourceGrowthValue + '/' + towerValue + '/' + wallValue + '/' + towerToWinValue}}">
                     {{MESSAGES_MAP.gameInitStart | translate | uppercase}}
                 </button>
