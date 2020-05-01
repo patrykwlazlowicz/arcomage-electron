@@ -7,6 +7,7 @@ import { GameModule } from './ui/game/game.module';
 import { createTranslateLoader } from './shared/lib/translate-file-loader';
 import { MenuModule } from './ui/menu/menu.module';
 import { InitGameModule } from './ui/init-game/init-game.module';
+import { HowToPlayModule } from './ui/how-to-play/how-to-play.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { InitGameModule } from './ui/init-game/init-game.module';
     }),
     MenuModule,
     InitGameModule,
+    HowToPlayModule,
     GameModule
   ],
   providers: [],

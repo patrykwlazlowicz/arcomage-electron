@@ -5,6 +5,11 @@ export namespace MessagesMap {
     export const gameMenuHowToPlay = 'game.menu.how.to.play';
     export const gameMenuNewGame = 'game.menu.new.game';
     export const gameMenuExit = 'game.menu.exit';
+    export const gameHowToPlayGameGoal = 'game.how.to.play.game.goal';
+    export const gameHowToPlayResources = 'game.how.to.play.resources';
+    export const gameHowToPlayCard = 'game.how.to.play.card';
+    export const gameHowToPlayControl = 'game.how.to.play.control';
+    export const gameHowToPlayBack = 'game.how.to.play.back';
     export const gameInitResourcesState = 'game.init.resources.state';
     export const gameInitResourcesGrowth = 'game.init.resources.growth';
     export const gameInitTower = 'game.init.tower';

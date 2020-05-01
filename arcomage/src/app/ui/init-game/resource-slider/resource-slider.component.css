@@ -7,13 +7,23 @@
 .init-game-resource-slider-title {
     color: wheat;
     justify-content: left;
+    font-size: large;
 }
 
 .init-game-resource-slider-value {
     color: wheat;
     text-align: right;
+    font-size: large;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.init-game-resource-slider {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 96%;
+    text-align: center;
+    margin-left: 2%;
 }
 
 .init-game-resource-slider::-webkit-slider-runnable-track {
