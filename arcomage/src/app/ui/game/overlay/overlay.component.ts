@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { GameMessage } from '../../interface/game-messages';
 import _ from 'lodash';
 import { GameImages } from '../../enum/game-images.enum';
@@ -19,6 +19,8 @@ export class OverlayComponent implements OnInit {
   showOverlay: boolean = false;
   messages: GameMessage[] = [];
   currentMessage: GameMessage = null;
+
+  @Output() allMessagesShowed: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -41,6 +43,7 @@ export class OverlayComponent implements OnInit {
         this.showOverlayWithOldestMessage();
       } else {
           this.currentMessage = null;
+          this.allMessagesShowed.emit(true);
       }
     }
   }

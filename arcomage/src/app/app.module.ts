@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GameModule } from './ui/game/game.module';
 import { createTranslateLoader } from './shared/lib/translate-file-loader';
 import { MenuModule } from './ui/menu/menu.module';
+import { InitGameModule } from './ui/init-game/init-game.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,9 @@ import { MenuModule } from './ui/menu/menu.module';
       useDefaultLang: true,
       defaultLanguage: 'en'
     }),
-    GameModule,
-    MenuModule
+    MenuModule,
+    InitGameModule,
+    GameModule
   ],
   providers: [],
   bootstrap: [AppComponent]

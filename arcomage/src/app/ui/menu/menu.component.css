@@ -3,14 +3,3 @@
     padding-left: 5%;
     padding-right: 5%;
 }
-
-.game-menu-button {
-    font-size: xx-large;
-    color: wheat !important;
-    border-color: wheat !important;
-    background-color: rgba(27, 10, 3, 0.8) !important;
-    box-shadow: none !important;
-}
-.game-menu-button:hover, .game-menu-button:active, .game-menu-button:visited, .game-menu-button:focus {
-    background-color: rgba(27, 10, 3, 0.95) !important;
-}

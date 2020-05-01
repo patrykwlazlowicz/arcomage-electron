@@ -1,10 +1,6 @@
 .game-resource-label {
-    background-color: rgba(27, 10, 3, 0.5);
+    background-color: rgba(27, 10, 3, 0.6);
     color: wheat;
     padding: 0.2em 0.4em 0.2em 0.4em;
     width: 100%;
-    border-radius: 0.4rem !important;
-    border-width: 1px;
-    border-style: solid;
-    border-color: wheat;
 }

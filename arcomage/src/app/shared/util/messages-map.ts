@@ -5,6 +5,13 @@ export namespace MessagesMap {
     export const gameMenuHowToPlay = 'game.menu.how.to.play';
     export const gameMenuNewGame = 'game.menu.new.game';
     export const gameMenuExit = 'game.menu.exit';
+    export const gameInitResourcesState = 'game.init.resources.state';
+    export const gameInitResourcesGrowth = 'game.init.resources.growth';
+    export const gameInitTower = 'game.init.tower';
+    export const gameInitWall = 'game.init.wall';
+    export const gameInitTowerToWin = 'game.init.tower.to.win';
+    export const gameInitBack = 'game.init.back';
+    export const gameInitStart = 'game.init.start';
     export const gameResourcesStatePrefix = 'game.resources.state.';
     export const gameResourcesGrowthPrefix = 'game.resources.growth.';
     export const gameResourcesKindBricks = 'bricks';

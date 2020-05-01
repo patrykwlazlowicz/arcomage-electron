@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ResourcesSide } from '../enum/resources-side.enum';
 import { GameImages } from '../enum/game-images.enum';
 import { TableService } from '../../engine/service/table.service';
@@ -12,6 +12,7 @@ import { GameSide } from '../../engine/enum/game-side.enum';
 import { GameAction } from '../../engine/enum/game-action.enum';
 import { GameState } from '../../engine/enum/game-state.enum';
 import { MessagesMap } from '../../shared/util/messages-map';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -20,17 +21,34 @@ import { MessagesMap } from '../../shared/util/messages-map';
 })
 export class GameComponent implements OnInit {
 
+  private static readonly MENU_PATH: string = '/menu';
+  private static readonly ROUTE_PARAM_INIT_TOWER: string = 'tower';
+  private static readonly ROUTE_PARAM_INIT_WALL: string = 'wall';
+  private static readonly ROUTE_PARAM_INIT_RESOURCE_STATE: string = 'resource-state';
+  private static readonly ROUTE_PARAM_INIT_RESOURCE_GROWTH: string = 'resource-growth';
+  private static readonly ROUTE_PARAM_INIT_TOWER_TO_WIN: string = 'tower-to-win';
+
   MESSAGES_MAP: typeof MessagesMap = MessagesMap;
   RESOURCES_SIDE: typeof ResourcesSide = ResourcesSide;
   GAME_IMAGES: typeof GameImages = GameImages;
 
   game: GameDTO;
   messages: GameMessage[];
+  
+  @HostListener('window:keydown.esc')
+  backToMenu() {
+    this.router.navigate([GameComponent.MENU_PATH]);
+  }
 
-  constructor(private tableService: TableService, private aiService: AIService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private tableService: TableService, private aiService: AIService) { }
 
   ngOnInit(): void {
-    this.game = this.tableService.createGame(25, 10, 15, 1, 50);
+    const initialTowerHeight = Number(this.route.snapshot.paramMap.get(GameComponent.ROUTE_PARAM_INIT_TOWER));
+    const initialWallHeight = Number(this.route.snapshot.paramMap.get(GameComponent.ROUTE_PARAM_INIT_WALL));
+    const initialRsourcesState = Number(this.route.snapshot.paramMap.get(GameComponent.ROUTE_PARAM_INIT_RESOURCE_STATE));
+    const initialGrowthGrowth = Number(this.route.snapshot.paramMap.get(GameComponent.ROUTE_PARAM_INIT_RESOURCE_GROWTH));
+    const towerHeightForWin = Number(this.route.snapshot.paramMap.get(GameComponent.ROUTE_PARAM_INIT_TOWER_TO_WIN));
+    this.game = this.tableService.createGame(initialTowerHeight, initialWallHeight, initialRsourcesState, initialGrowthGrowth, towerHeightForWin);
   }
 
   playCard(event: CardClick): void {
@@ -47,6 +65,12 @@ export class GameComponent implements OnInit {
         tempMsgs.push(...this.createMessagesAfterMove(this.game.lastUsedCards, false));
       }
       this.messages = tempMsgs;
+    }
+  }
+
+  allMessagesShowed(): void {
+    if (this.game.gameState == GameState.END) {
+      this.router.navigate([GameComponent.MENU_PATH]);
     }
   }
 

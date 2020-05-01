@@ -1,13 +1,13 @@
 <div class="row">
     <div class="col-4"></div>
     <div class="col-4 text-center game-menu-container">
-        <button class="btn btn-primary btn-block font-weight-bold game-menu-button" routerLink="/howtoplay">
+        <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border" routerLink="{{HOW_TO_PLAY_PATH}}">
             {{MESSAGES_MAP.gameMenuHowToPlay | translate | uppercase}}
         </button>
-        <button class="btn btn-primary btn-block font-weight-bold game-menu-button" routerLink="/game/init">
+        <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border" routerLink="{{NEW_GAME_PATH}}">
             {{MESSAGES_MAP.gameMenuNewGame | translate | uppercase}}
         </button>
-        <button class="btn btn-primary btn-block font-weight-bold game-menu-button" (click)="exit()">
+        <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border" (click)="exit()">
             {{MESSAGES_MAP.gameMenuExit | translate | uppercase}}
         </button>
     </div>

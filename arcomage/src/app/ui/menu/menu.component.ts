@@ -9,6 +9,8 @@ import { MessagesMap } from '../../shared/util/messages-map';
 export class MenuComponent implements OnInit {
 
   MESSAGES_MAP: typeof MessagesMap = MessagesMap;
+  HOW_TO_PLAY_PATH: string = '/howtoplay';
+  NEW_GAME_PATH: string = '/game/init';
 
   constructor() { }
 
