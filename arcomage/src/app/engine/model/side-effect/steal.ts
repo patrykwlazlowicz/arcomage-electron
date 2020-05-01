@@ -5,22 +5,23 @@ import * as _ from 'lodash';
 interface SideEffectProperty {
     what: string;
     property: string;
-    secondWaveDamageWhat: string;
-    secondWaveDamageProperty: string;
     value: number;
+    stealRatio: number;
 }
 
-export class Damage implements SideEffect {
+export class Steal implements SideEffect {
 
-    static TYPE: string = "DAMAGE";
+    static TYPE: string = "STEAL";
 
     execute(subject: PlayerDTO, opponentForSubject: PlayerDTO, sideEffectProperty: SideEffectProperty): void {
+        let theftIncome = sideEffectProperty.value;
         subject[sideEffectProperty.what][sideEffectProperty.property] -= sideEffectProperty.value;
         if (subject[sideEffectProperty.what][sideEffectProperty.property] < 0) {
-            const secondWave: number = subject[sideEffectProperty.what][sideEffectProperty.property];
-            subject[sideEffectProperty.secondWaveDamageWhat][sideEffectProperty.secondWaveDamageProperty] += secondWave;
+            theftIncome += subject[sideEffectProperty.what][sideEffectProperty.property];
             subject[sideEffectProperty.what][sideEffectProperty.property] = 0;
         }
+        theftIncome = Math.ceil(theftIncome / 2);
+        opponentForSubject[sideEffectProperty.what][sideEffectProperty.property] += theftIncome;
     }
 
 }
