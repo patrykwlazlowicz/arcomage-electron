@@ -7,6 +7,7 @@ import { SwapResources } from './side-effect/swap-resources';
 import { DiscardCard } from './side-effect/discard-card';
 import { SideEffectDTO } from '../dto/side-effect-dto';
 import { PlayerDTO } from '../dto/player-dto';
+import { Steal } from './side-effect/steal';
 
 export class SideEffectExecutor {
 
@@ -19,6 +20,7 @@ export class SideEffectExecutor {
     this.sideEffectsRegister.set(AlignResources.TYPE, new AlignResources());
     this.sideEffectsRegister.set(SwapResources.TYPE, new SwapResources());
     this.sideEffectsRegister.set(DiscardCard.TYPE, new DiscardCard());
+    this.sideEffectsRegister.set(Steal.TYPE, new Steal());
   }
 
   executeEffect(sideEffectDTO: SideEffectDTO, leader: PlayerDTO, opponent: PlayerDTO): void {

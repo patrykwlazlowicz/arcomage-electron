@@ -61,7 +61,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -2
+                    "value": 2
                 }
             }
         ]
@@ -102,7 +102,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -4
+                    "value": 4
                 }
             }
         ]
@@ -178,7 +178,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -3
+                    "value": 3
                 }
             },
             {
@@ -193,7 +193,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             }
         ]
@@ -221,7 +221,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -1
+                    "value": 1
                 }
             },
             {
@@ -288,7 +288,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -5
+                    "value": 5
                 }
             }
         ]
@@ -329,7 +329,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -4
+                    "value": 4
                 }
             }
         ]
@@ -435,7 +435,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -2
+                    "value": 2
                 }
             }
         ]
@@ -515,7 +515,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             }
         ]
@@ -543,7 +543,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -7
+                    "value": 7
                 }
             }
         ]
@@ -571,7 +571,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             },
             {
@@ -651,7 +651,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             },
             {
@@ -724,7 +724,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -10
+                    "value": 10
                 }
             },
             {
@@ -745,7 +745,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             }
         ]
@@ -773,7 +773,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -9
+                    "value": 9
                 }
             }
         ]
@@ -807,7 +807,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -10
+                    "value": 10
                 }
             },
             {
@@ -828,7 +828,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -7
+                    "value": 7
                 }
             }
         ]
@@ -862,7 +862,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -12
+                    "value": 12
                 }
             },
             {
@@ -883,7 +883,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -8
+                    "value": 8
                 }
             }
         ]
@@ -936,7 +936,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             }
         ]
@@ -1003,7 +1003,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -8
+                    "value": 8
                 }
             },
             {
@@ -1037,24 +1037,12 @@
                     "type": "NO_CONDITION",
                     "conditionProperty": null
                 },
-                "type": "CHANGE_VALUE",
-                "effectForOpponent": false,
+                "type": "STEAL",
+                "effectForOpponent": true,
                 "effectProperty": {
                     "what": "bricks",
                     "property": "state",
-                    "value": 3
-                }
-            },
-            {
-                "condition": {
-                    "type": "NO_CONDITION",
-                    "conditionProperty": null
-                },
-                "type": "CHANGE_VALUE",
-                "effectForOpponent": false,
-                "effectProperty": {
-                    "what": "gems",
-                    "property": "state",
+                    "stealRatio": 0.5,
                     "value": 5
                 }
             },
@@ -1063,25 +1051,13 @@
                     "type": "NO_CONDITION",
                     "conditionProperty": null
                 },
-                "type": "CHANGE_VALUE",
-                "effectForOpponent": true,
-                "effectProperty": {
-                    "what": "bricks",
-                    "property": "state",
-                    "value": -5
-                }
-            },
-            {
-                "condition": {
-                    "type": "NO_CONDITION",
-                    "conditionProperty": null
-                },
-                "type": "CHANGE_VALUE",
+                "type": "STEAL",
                 "effectForOpponent": true,
                 "effectProperty": {
                     "what": "gems",
                     "property": "state",
-                    "value": -10
+                    "stealRatio": 0.5,
+                    "value": 10
                 }
             }
         ]
@@ -1122,7 +1098,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -10
+                    "value": 10
                 }
             }
         ]
@@ -1150,7 +1126,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -10
+                    "value": 10
                 }
             },
             {
@@ -1210,7 +1186,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -3
+                    "value": 3
                 }
             },
             {
@@ -1231,7 +1207,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -2
+                    "value": 2
                 }
             }
         ]
@@ -1272,7 +1248,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -3
+                    "value": 3
                 }
             }
         ]
@@ -1313,7 +1289,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -8
+                    "value": 8
                 }
             }
         ]
@@ -1354,7 +1330,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -13
+                    "value": 13
                 }
             }
         ]
@@ -1408,7 +1384,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -20
+                    "value": 20
                 }
             },
             {
@@ -2388,7 +2364,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -10
+                    "value": 10
                 }
             }
         ]
@@ -2667,7 +2643,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             }
         ]
@@ -3701,7 +3677,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -6
+                    "value": 6
                 }
             }
         ]
@@ -3882,7 +3858,7 @@
                 "effectProperty": {
                     "what": "recruits",
                     "property": "state",
-                    "value": 3
+                    "value": -3
                 }
             },
             {
@@ -3948,7 +3924,7 @@
                     "property": "wall",
                     "secondWaveDamageWhat": "castle",
                     "secondWaveDamageProperty": "tower",
-                    "value": -8
+                    "value": 8
                 }
             }
         ]
@@ -3958,7 +3934,7 @@
         "priorityForAI": 2,
         "price": {
             "bricks": 0,
-            "gems": 15,
+            "gems": 18,
             "recruits": 0
         },
         "playAgain": false,
