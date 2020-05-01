@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 game-init-container">
+        <init-game-resource-slider [title]="MESSAGES_MAP.gameInitResourcesState" [value]="resourceStateValue"
+            [min]="RESOURCE_STATE_MIN" [max]="RESOURCE_STATE_MAX" (changeValue)=changeResourceState($event)>
+        </init-game-resource-slider>
+        <init-game-resource-slider [title]="MESSAGES_MAP.gameInitResourcesGrowth" [value]="resourceGrowthValue"
+            [min]="RESOURCE_GROWTH_MIN" [max]="RESOURCE_GROWTH_MAX" (changeValue)=changeResourceGrowth($event)>
+        </init-game-resource-slider>
+        <init-game-resource-slider [title]="MESSAGES_MAP.gameInitTower" [value]="towerValue" [min]="TOWER_MIN"
+            [max]="TOWER_MAX" (changeValue)=changeTower($event)>
+        </init-game-resource-slider>
+        <init-game-resource-slider [title]="MESSAGES_MAP.gameInitWall" [value]="wallValue" [min]="WALL_MIN"
+            [max]="WALL_MAX" (changeValue)=changeWall($event)>
+        </init-game-resource-slider>
+        <init-game-resource-slider [title]="MESSAGES_MAP.gameInitTowerToWin" [value]="towerToWinValue"
+            [min]="TOWER_TO_WIN_MIN" [max]="TOWER_TO_WIN_MAX" (changeValue)=changeTowerToWin($event)>
+        </init-game-resource-slider>
+        <div class="row">
+            <div class="col-6 text-center">
+                <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border init-game-button"
+                    routerLink="{{BACK_PATH}}">
+                    {{MESSAGES_MAP.gameInitBack | translate | uppercase}}
+                </button>
+            </div>
+            <div class="col-6 text-center game-menu-container">
+                <button class="btn btn-primary btn-block font-weight-bold ui-button ui-border init-game-button"
+                    routerLink="{{START_PATH_PREFFIX + resourceStateValue + '/' + resourceGrowthValue + '/' + towerValue + '/' + wallValue + '/' + towerToWinValue}}">
+                    {{MESSAGES_MAP.gameInitStart | translate | uppercase}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

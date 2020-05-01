@@ -2,3 +2,21 @@ body, html {
     height: 100%;
     margin: 0;
 }
+
+.ui-border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: wheat !important;
+    border-radius: 0.4rem !important;
+}
+
+.ui-button {
+    font-size: xx-large;
+    color: wheat !important;
+    background-color: rgba(27, 10, 3, 0.8) !important;
+    box-shadow: none !important;
+}
+
+.ui-button:hover, .ui-button:active, .ui-button:visited, .ui-button:focus {
+    background-color: rgba(27, 10, 3, 0.95) !important;
+}

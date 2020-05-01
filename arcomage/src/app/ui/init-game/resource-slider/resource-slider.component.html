@@ -1,0 +1,10 @@
+<div class="ui-border init-game-resource-slider-box">
+    <form class="form-horizontal">
+        <div class="form-inline">
+            <label class="col-8 font-weight-bold init-game-resource-slider-title">{{title | translate}}:</label>
+            <p class="col-4 font-weight-bold init-game-resource-slider-value">{{value}}</p>
+        </div>
+    </form>
+    <input type="range" #state class="custom-range init-game-resource-slider" [min]="min" [max]="max" [value]="value"
+        (change)="changeValue.emit(state.value)">
+</div>
