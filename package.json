@@ -6,9 +6,9 @@
   "scripts": {
     "start": "electron .",
     "test": "mocha --files true -r ts-node/register engine-test/*test.ts",
-    "build:linux": "electron-packager . Arcomage --ignore=arcomage --ignore=engine-test --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=linux --arch=x64",
-    "build:win32": "electron-packager . Arcomage --ignore=arcomage --ignore=engine-test --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=win32 --arch=x64",
-    "build:darwin": "electron-packager . Arcomage --ignore=arcomage --ignore=engine-test --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=darwin --arch=x64"
+    "prebuild": "npm run build --prefix arcomage",
+    "build": "electron-packager . Arcomage --ignore=arcomage --ignore=engine-test --ignore=.env* --ignore=gulpfile.js --overwrite --out=dist --extra-resource=arcomage/dist/frontend --platform=linux --platform=win32 --platform=darwin --arch=x64",
+    "postbuild": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,14 +25,18 @@
     "@types/lodash": "^4.14.150",
     "@types/mocha": "^7.0.2",
     "chai": "^4.2.0",
+    "electron": "^8.2.0",
     "electron-packager": "^14.2.1",
     "electron-reload": "^1.5.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-zip": "^5.0.1",
     "mocha": "^7.1.1",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "electron": "^8.2.0",
     "dotenv": "^8.2.0"
   }
 }

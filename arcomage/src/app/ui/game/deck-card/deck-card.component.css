@@ -9,6 +9,7 @@
 }
   
 .game-deck-card-image:hover {
+    padding-top: -10px;
     padding-bottom: 10px;
 } 
 
