@@ -3,7 +3,7 @@ const path = require('path');
 const url = require('url');
 
 require('dotenv').config();
-if (process.env.ENABLE_RELOAD === 'true') {
+if (process.env.PACKAGE === 'false') {
   require('electron-reload')(__dirname);
 }
 
@@ -12,9 +12,15 @@ let win = null;
 
 app.on('ready', function () {
 
-  win = new BrowserWindow({ show: false });
+  win = new BrowserWindow({
+    width: 1920,
+    height: 1080,
+    resizable: false,
+    center: true,
+    autoHideMenuBar: true,
+    fullscreen: true
+  });
 
-  // Specify entry point
   if (process.env.PACKAGE === 'false') {
     win.loadURL(process.env.HOST);
     win.webContents.openDevTools();
@@ -26,10 +32,6 @@ app.on('ready', function () {
     }));
   }
 
-  win.maximize();
-  win.show();
-
-  // Remove window once app is closed
   win.on('closed', function () {
     win = null;
   });
