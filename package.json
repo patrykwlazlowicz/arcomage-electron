@@ -4,6 +4,7 @@
   "description": "Arcomage game",
   "main": "main.js",
   "scripts": {
+    "preinstall": "npm install --prefix arcomage",
     "start": "electron .",
     "test": "mocha --files true -r ts-node/register engine-test/*test.ts",
     "prebuild": "npm run build --prefix arcomage",
